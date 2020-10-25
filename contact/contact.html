@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="Une question suite à votre séjour ou un évènement à organiser? L'HotelCOP
+    Hotel 5 étoiles est à votre service pour répondre à toutes vos attentes. Une équipe évènementielle
+    vous aidera dans l'organisation de votre évènement dans ce lieu unique de Paris."/>
+    <link href="../extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+
+    <script src="../extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../index/index.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="formulaire.css">
+
+    <title>Formulaire de contact HotelCOP</title>
+</head>
+
+<body>
+
+
+
+
+    <!-- MENU HAMBURGER CACHE -->
+    <!--
+    Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+     la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+     pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+     -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="../index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="../restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="../spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="../evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="../actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="../reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="../panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="../acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="../avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="../newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+    <!-- MENU HAMBURGER CACHE FIN -->
+
+
+    <!-- DEBUT HEADER -->
+    <header class="container-fluid px-0 position-fixed">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 col-sm-4 row">
+                <button class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-2 text-center justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center"><img id="myLogoImg" src="../index/pictures/include/logo_full.svg" class="" alt="Logo HotelCOP"></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="../reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block"><a href="../panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none col-12">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0 ">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav mx-0">
+            <ul class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="../restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="../spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="../index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+    <!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container contact_pad">
+        <!--DEBUT FORM CONTENEUR-->
+        <form id="myForm" class="form_section mb-5 mt-5" action="#" method="get">
+            <!-- CONTENEUR FORM 1 -->
+            <div class="card">
+                <!-- CONTENEUR FORM 2 -->
+                <div class="container2 row">
+
+                    <!-- DEBUT DES INPUTS -->
+                    <div class="col-lg-8 order-2 order-lg-1">
+                        <div class="card-body myForm">
+                            <!-- TITRE -->
+                            <h3 class="font-weight-bold mt-4 mb-4">Contactez-nous:</h3>
+
+                            <!-- DEBUT LIGNE 1 -->
+                            <div class="row align-items-center mb-3">
+                                <!-- DEBUT GENRE -->
+                                <div class="col-md-3">
+                                    <div class="md-form mb-0 mySexe">
+                                        <label for="monsieur">M.</label>
+                                        <input type="radio" id="monsieur" name="sexe" value="H" class="mr-3">
+                                        <label for="madame">Mme</label>
+                                        <input type="radio" id="madame" name="sexe" value="F">
+                                    </div>
+                                </div>
+                                <!-- FIN GENRE -->
+
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mb-2">
+                                    <div class="md-form mb-0">
+                                        <span id="sexeSpan" class="warning_span">Séléctionnez un choix</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+
+                            </div>
+                            <!-- FIN LIGNE 1 -->
+
+
+
+
+
+                            <!-- DEBUT LIGNE 2 -->
+
+                            <div class="row align-items-center">
+                                <!-- DEBUT NOM -->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <label for="input_nom">Nom*</label>
+                                        <input type="text" id="input_nom" minlength="2" placeholder="Ex: Dupont" required class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN NOM -->
+
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mb-5 mb-md-0">
+                                    <div class="md-form mb-0">
+                                        <span id="nameSpan" class="warning_span">Deux caractères minimum</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+                            </div>
+                            <!-- FIN LIGNE 2 -->
+
+
+
+
+
+
+                            <!-- DEBUT LIGNE 3 -->
+
+                            <div class="row align-items-center">
+                                <!-- DEBUT NOM -->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <label for="input_prenom">Prenom*</label>
+                                        <input name="firstName" type="text" id="input_prenom" minlength="2" placeholder="Ex: Jean" required class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN NOM -->
+
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mb-5 mb-md-0">
+                                    <div class="md-form mb-0">
+                                        <span id="prenomSpan" class="warning_span">Deux caractères minimum</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+                            </div>
+                            <!-- FIN LIGNE 3 -->
+
+
+
+
+
+                            <!-- DEBUT LIGNE 3 -->
+                            <div class="row align-items-center">
+                                <!-- DEBUT EMAIL -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_email">Email*</label>
+                                        <input type="email" id="input_email" placeholder="Ex: contact@hotelcop.com" required class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN EMAIL -->
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mb-5 mb-md-0">
+                                    <div class="md-form mb-0">
+                                        <span id="emailSpan" class="warning_span">Six caractères minimum</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+                            </div>
+                            <!-- FIN LIGNE 3 -->
+
+
+
+                            <!-- DEBUT LIGNE 4 -->
+
+                            <div class="row align-items-center">
+                                <!-- DEBUT TELEPHONE -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_tel" class="">Téléphone*</label>
+                                        <input type="text" id="input_tel" minlength="10" placeholder="Ex: 06 54 36 36 89" required class="active form-control">
+                                    </div>
+                                </div>
+                                <!-- FIN TELEPHONE -->
+
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mt-3 mb-5 mb-md-0">
+                                    <div class="md-form mb-0">
+                                        <span id="telSpan" class="warning_span">Dix chiffres minimum</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+                            </div>
+                            <!-- FIN LIGNE 4 -->
+
+
+
+
+
+
+                            <div class="row mt-3">
+                                <!-- DEBUT ADRESSE -->
+                                <div class="col-md-8">
+                                    <div class="md-form mb-0">
+                                        <label for="input_adresse">Adresse</label>
+                                        <input type="text" id="input_adresse" minlength="2" placeholder="Ex: 1 Avenue Montaigne" class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN ADRESSE -->
+
+                                <!-- DEBUT POSTALE -->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <label for="input_postale" class="">Code Postale</label>
+                                        <input type="number" id="input_postale" placeholder="Ex: 75008" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- FIN POSTALE -->
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_entreprise">Entreprise:</label>
+                                        <input type="text" id="input_entreprise" placeholder="Ex: HotelCOP" minlength="2" class="form-control mb-3">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DEBUT PAYS -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_pays">Pays:</label>
+                                        <input type="text" id="input_pays" minlength="4" required placeholder="Ex: France" class="form-control mb-3">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN PAYS -->
+
+
+
+
+                            <!-- DEBUT CATEGORIE -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="d-flex flex-column md-form mb-3 mt-3">
+                                        <label for="categorie">Sélectionnez la catégorie de votre demande*: </label>
+                                        <select name="raison" id="categorie" required class="myRaison">
+                                            <option value="" selected>-</option>
+                                            <option value="restaurant">Restaurant</option>
+                                            <option value="hebergement">Hébergement</option>
+                                            <option value="spa">Spa</option>
+                                            <option value="oredre_general">Ordre général</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN CATEGORIE -->
+
+                            <!-- DEBUT RAISON -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="d-flex flex-column md-form mb-3 mt-3">
+                                        <label for="raison">Sélectionnez la raison de votre demande*: </label>
+                                        <select name="raison" id="raison" required class="myRaison">
+                                            <option value="" selected>-</option>
+                                            <option value="reservation">Réservation(s) / Annulation(s)</option>
+                                            <option value="questions">Question(s) générale</option>
+                                            <option value="support" >Support technique</option>
+                                            <option value="livraison">Livraison</option>
+                                            <option value="objets">Objet(s) perdu</option>
+                                            <option value="medical">Problèmes médicaux</option>
+                                            <option value="commentaires">Commentaires sur l'hotel</option>
+                                            <option value="autres">Autres</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN RAISON -->
+
+
+                            <!-- DEBUT SUJET -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_sujet">Sujet de votre demande*:</label>
+                                        <input type="text" id="input_sujet" minlength="4" required placeholder="Objet du message" class="form-control mb-3">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN SUJET -->
+
+
+
+                            <!-- DEBUT TEXTEAREA + BUTTON -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <label for="contact_message">Votre message*:</label>
+                                        <textarea id="contact_message" minlength="100" required placeholder="100 charactères minimum" class="form-control md-textarea" rows="7"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                <i>* Merci de remplir les champs obligatoires</i>
+                                <div class="d-flex">
+                                    <input type="reset" class="contact_button mt-5 mr-3" value="Annuler">
+                                    <input type="submit" class="contact_button mt-5" value="Envoyer">
+                                </div>
+                            </div>
+                            <!-- FIN TEXTEAREA + BUTTON -->
+                        </div>
+                    </div>
+                    <!-- FIN DES INPUTS -->
+
+                    <!-- DEBUT CONTACT HOTEL -->
+                    <div class="col-lg-4 order-1">
+                        <div class="card-body contact text-center h-100 white-text">
+                            <img src="picture/logo_min_or.svg" alt="hotel_cop_logo" style="width: 150px; padding-bottom: 50px">
+                            <ul class="text-lg-left list-unstyled ml-4">
+                                <li>
+                                    <p class="pr-2">Adresse: 1 Avenue Montaigne, <br><span class="adresse">75008 PARIS</span></p>
+                                </li>
+                                <li>
+                                    <p class="pr-2">Tel: 01 48 52 36 98</p>
+                                </li>
+                                <li>
+                                    <p class="pr-2">Email: contact@hotelcop.com</p>
+                                </li>
+                            </ul>
+                            <hr class="hr-light my-4">
+                            <p>
+                                <span class="pr-2"><a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a></span>
+                                <span class="pr-2"><a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a></span>
+                                <span class="pr-2"><a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a></span>
+                                <span class="pr-2"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></span>
+                                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FIN CONTACT HOTEL -->
+                </div>
+                <!-- FIN CONTENEUR FORM 2 -->
+            </div>
+            <!-- FIN CONTENEUR FORM 1 -->
+        </form>
+        <!--FIN FORM CONTENEUR-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="../index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl">
+                    <li><a href="../mentions-legal/mentions-legal.html">Mentions légales</a></li>
+                    <li><a href="../cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="../plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="../qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="../acces/acces.html">Accès</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="../evenements/evenements.html">Evènements</a></li>
+                    <li><a href="../actualites/actualites.html">Actualités</a></li>
+                    <li><a href="../actualites/actualites.html">Presse</a></li>
+                    <li><a href="../newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+    <!-- FIN FOOTER -->
+
+<script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+<script src="../index/index_bis.js"></script>
+<script src="formulaire.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

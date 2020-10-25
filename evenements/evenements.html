@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="L'HotelCOP Hotel 5 étoiles organise de nombreux évenements. Mariage, diners d'affaires,
+     séminaires, vernissage ou même compétition de golf, l'Hotelcop ne connait pas de limites. Venez voir les derniers évènements de l'année.
+     Pourquoi ne pas concrétiser le votre à l'Hotelcop ?"/>
+    <link href="../extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+
+    <script src="../extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="evenement.css">
+    <link rel="stylesheet" href="../index/index.css">
+
+    <title>Evènements HôtelCop</title>
+</head>
+
+<body>
+
+
+
+
+<!-- MENU HAMBURGER CACHE -->
+<!--
+Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+ la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+ pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+ -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="../index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="../restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="../spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="../evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="../actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="../reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="../panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="../acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="../avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="../newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+<!-- MENU HAMBURGER CACHE FIN -->
+
+
+    <!-- DEBUT HEADER -->
+    <header class="container-fluid px-0 position-fixed">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 col-sm-4 row">
+                <button class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-2 text-center justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center"><img id="myLogoImg" src="../index/pictures/include/logo_full.svg" class="" alt="Logo HotelCOP"></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="../reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block"><a href="../panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none ">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0 ">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav mx-0">
+            <ul class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="../restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="../spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="../index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+    <!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------DEBUT EVENEMENTS------->
+    <div class="container-fluid px-0 even_pad">
+
+        <div class="row align-items-center justify-content-center py-5">
+            <h1 class="text-center mb-5">Les événements de l'HôtelCOP</h1>
+        </div>
+
+
+        <!------DEBUT ROW 1------->
+        <div class="row px-0 align-items-center justify-content-center myEvent_row row_bg">
+            <div class="col-12 col-lg-5 px-0 pl-lg-5">
+
+                <iframe src="https://www.youtube.com/embed/6JN9db6dH9g?vq=hd1080"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="col-12 px-0 myFrame" width="560" height="315"></iframe>
+
+            </div>
+            <div class="row col-12 col-lg-7 pt-3 pt-lg-0">
+                <div class="col-12 px-lg-5 text-center">
+                    <h4 class="mb-5">Des soirées exceptionnelles</h4>
+                    <p>
+                        Nous équipes organisent de nombreuses soirées autour de différents thèmes.
+                    </p>
+                    <p>
+                        <strong> Le salon royal de l'HôtelCop</strong> est un lieu unique.
+                        <br> Capable d'accueillir tout type d'<strong>expositions et de séminaires d'entreprise</strong>,
+                        <br>il est particulièrement apprécié par notre clientèle d'affaires notamment pour <br>le calme et la sécurité que nous garantissons.
+                    </p>
+                    <p>
+                        Un service d'organisation événementielle
+                        <br>destinée aussi bien aux particuliers qu'aux profesionnels <br>est à disposition de nos clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------FIN ROW 1------->
+
+
+
+
+
+
+        <!------DEBUT ROW 2------->
+        <div class="row px-0 align-items-center justify-content-center myEvent_row">
+            <div class="col-12 col-lg-5 px-0 pr-lg-5 order-lg-2">
+
+                <iframe src="https://www.youtube.com/embed/zcWnkazmLw4?vq=hd1080" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="col-12 px-0 myFrame" width="560" height="315"></iframe>
+
+            </div>
+            <div class="row col-12 col-lg-7 pt-3 pt-lg-0 order-lg-1">
+                <div class="col-12 px-lg-5 text-center">
+                    <h4 id="famille" class="mb-5">Des événements familiaux inoubliables</h4>
+                    <p>
+                        L'HôtelCop organise l'événement familial avec l'objectif de le rendre inoubliable.
+                    </p>
+                    <p>
+                        Notre équipe de <strong class="famille">wedding planner</strong> s'occupera de votre <strong class="famille">mariage</strong> dans les moindres détails.
+                    </p>
+                    <p>
+                        Nous sommes également en mesure de vous proposer<br>les prestations de professionnels
+                        pour l'organisation originale <br>de <strong class="famille">baby shower ou de baptême.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------FIN ROW 2------->
+
+
+
+        <!------DEBUT ROW 3------->
+        <div class="row px-0 align-items-center justify-content-center myEvent_row row_bg">
+            <div class="col-12 col-lg-5 pl-lg-5 px-0">
+                <iframe src="https://www.youtube.com/embed/QqH2YEnEylk?vq=hd1080" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="col-12 px-0 myFrame" width="560" height="315"></iframe>
+
+
+            </div>
+            <div class="row col-12 col-lg-7 pt-3 pt-lg-0">
+                <div class="col-12 px-lg-5 text-center">
+                    <h4 class="mb-5">Un golf d'exception</h4>
+                    <p>
+                        L'hôtelCop à eu l'honneur d'accueillir sur son terrain de nombreux champions.
+                    </p>
+                    <p>Grâce à notre partenariat avec le <strong> Versailles Country Club </strong>
+                        <br>Tiger Wood et Rory Mcilroy ont notamment participé <br>à notre très célèbre championnat annuel.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------FIN ROW 1------->
+    </div>
+
+    <!------FIN EVENEMENTS------->
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="../index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl">
+                    <li><a href="../mentions-legal/mentions-legal.html">Mentions légales</a></li>
+                    <li><a href="../cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="../plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="../qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="../acces/acces.html">Accès</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="../evenements/evenements.html">Evènements</a></li>
+                    <li><a href="../actualites/actualites.html">Actualités</a></li>
+                    <li><a href="../actualites/actualites.html">Presse</a></li>
+                    <li><a href="../newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+    <!-- FIN FOOTER -->
+    <script src="../index/index_bis.js"></script>
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
+
+</body>
+</html>

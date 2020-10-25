@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="L'espace bien-être de l'HotelCOP 5 étoiles fait partie des plus beaux spa de la capitale.
+    Sauna, hammam, salle de sport et une large gamme de soins, tout y est pour que vous passiez un moment exceptionel."/>
+
+
+    <link href="../extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+
+    <script src="../extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="spa.css">
+    <link rel="stylesheet" href="../index/index.css">
+
+    <title>Spa - HôtelCOP</title>
+</head>
+
+<body>
+
+
+
+
+    <!-- MENU HAMBURGER CACHE -->
+    <!--
+    Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+     la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+     pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+     -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="../index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="../restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="../spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="../evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="../actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="../reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="../panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="../acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="../avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="../newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+    <!-- MENU HAMBURGER CACHE FIN -->
+
+
+    <!-- DEBUT HEADER -->
+    <header class="container-fluid px-0 position-fixed pos">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 col-sm-4 row">
+                <button class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-2 text-center justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center"><a href="../index.html"><img id="myLogoImg" src="../index/pictures/include/logo_full.svg" class="" alt="Logo HotelCOP"></a></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="../reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block"><a href="../panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none ">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav mx-0">
+            <ul class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="../restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="../spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="../index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+    <!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+    <!-- IMAGE ET PRESENTATION BLOCK-->
+    <div class="container-fluid spa_pad">
+        <div id="bandeau-relaxant" class="row row0">
+            <img class="img-fluid col-12 p-0" src="spa_pictures/bienvenue-au-spa_hotelcop.png" alt="Bandeau de bienvenu HotelCOP">
+        </div>
+    </div>
+
+    <div class="container pt-5 mb-5">
+        <div class="row">
+            <div class="column col-12 text-center">
+                <div class="feature pb-5"></div>
+                <div>
+                    <h2 class="mb-5">SPA</h2>
+                </div>
+                <div>
+                    <p id="ancre_soins" class="pb-5">Venez profiter d'un voyage sensoriel.</p>
+                </div>
+                <div>
+                    <p>
+                        Que vous ayez besoin de vous détendre loin du rythme effréné de la ville ou de faire de l'exercice,
+                        <br>l'HôtelCop vous offre une véritable bulle de bien-être.
+                        <br><br>Nos esthéticiennes effectuent une <strong>gamme complète de services de spa et de bien-être.</strong>
+                        <br>Elu meilleur <strong>établissements de bien-être de Paris</strong>,
+                        <br>l'HôtelCop et toute son équipe de professionnels sont heureux de vous accueillir,
+                        <br>.de 06h00 à 22h00.
+                    </p>
+                </div>
+                <div>
+                    <button class="mt-3" id="price_button">Voir les tarifs des soins</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN IMAGE ET PRESENTATION BLOCK-->
+
+
+
+
+
+
+
+
+
+
+
+    <div id="myDeck-hide">
+        <!-- DEBUT DU BLOCK CARD HIDE -->
+        <div id="myDeck" class="d-flex flex-column align-items-center pb-5">
+            <!-- DEBUT CARD DECK 1 -->
+            <div class="card-deck d-flex flex-column flex-lg-row justify-content-lg-center w-75 mt-5">
+                <!-- DEBUT CARD 1 -->
+                <div class="card mb-4">
+                    <!-- DEBUT CARD IMAGE 1 -->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="spa_pictures/soins/soin-detente_hotelcop.png" alt="Soin detente HotelCOP">
+                        <a href="#">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!-- FIN CARD IMAGE 1 -->
+
+                    <!--DEBUT CARD CONTENU 1 -->
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h4 class="card-title">Soin détente</h4>
+                        <p class="card-text">
+                            Ce soin est l’alliance inédite de techniques de modelage relaxantes.
+                            <br>Par un jeu de brumisations et de pressions douces, ce modelage sans huile
+                            <br>relance la micro-circulation du visage jusqu’au décolleté,
+                            <br>procurant un effet bonne mine immédiat.
+                            <br>Le visage est reposé, le teint est frais et resplendissant.
+                        </p>
+                        <button type="button" class="btn btn-light-blue btn-md">Réserver</button>
+                    </div>
+                    <!--FIN CARD CONTENU-->
+                </div>
+                <!-- FIN CARD 1 -->
+
+
+                <!-- DEBUT CARD 2 -->
+                <div class="card mb-4">
+                    <!-- DEBUT CARD IMAGE 2 -->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="spa_pictures/soins/soin-decouverte_hotelcop.png" alt="Soin decouverte HotelCOP">
+                        <a href="#">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!-- FIN CARD IMAGE 2 -->
+
+                    <!--DEBUT CARD CONTENU 2 -->
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h4 class="card-title">Soin découverte</h4>
+                        <p class="card-text">
+                            Un  coup  d’éclat  en  25  minutes.
+                            <br>Après un nettoyage du visage pour débarrasser la peau des impuretés,
+                            <br>l’application du masque apporte luminosité et vitalité au teint.
+                            <br>Le visage est relaxé, le teint éclatant.
+                        </p>
+                        <button type="button" class="btn btn-light-blue btn-md">Réserver</button>
+                    </div>
+                    <!--FIN CARD CONTENU 2 -->
+                </div>
+                <!-- FIN CARD 2 -->
+
+                <!-- DEBUT CARD 3 -->
+                <div class="card mb-4">
+                    <!-- DEBUT CARD IMAGE 3 -->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="spa_pictures/soins/soin-relaxant_hotelcop.png" alt="Soin relaxant HotelCOP">
+                        <a href="#">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!-- FIN CARD IMAGE 3 -->
+
+
+                    <!--DEBUT CARD CONTENU 3-->
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h4 class="card-title">Soin relaxant</h4>
+                        <p class="card-text">
+                            Ce modelage très réconfortant est réalisé exclusivement avec
+                            <br>une alliance unique de quatre huiles végétales d’exception.
+                            <br>La peau est douce, hydratée et enveloppée d’une subtile fragrance florale.
+                        </p>
+                        <button type="button" class="btn btn-light-blue btn-md">Réserver</button>
+                    </div>
+                    <!--FIN CARD CONTENU 3-->
+                </div>
+                <!-- FIN CARD 3 -->
+            </div>
+            <!-- FIN CARD DECK 1 -->
+
+
+            <!-- DEBUT CARD DECK 2 -->
+            <div class="card-deck d-flex flex-column flex-lg-row justify-content-lg-center w-75 mt-5">
+                <!-- DEBUT CARD 1 -->
+                <div class="card mb-4">
+                    <!-- DEBUT CARD IMAGE 1 -->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="spa_pictures/soins/soin-plaisir_hotelcop.png" alt="Soin plaisir HotelCOP">
+                        <a href="#">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!-- FIN CARD IMAGE 1 -->
+
+                    <!--DEBUT CARD CONTENU 1 -->
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h4 class="card-title">Soin plaisir</h4>
+                        <p class="card-text">
+                            À la lueur d’une bougie qui se transforme en huile hydratante tiède délicatement parfumée,
+                            <br>toutes les tensions sont soulagées et les énergies dynamisées.
+                            <br>Un moment de détente absolue où tous les sens sont choyés.</p>
+                        <button type="button" class="btn btn-light-blue btn-md">Réserver</button>
+                    </div>
+                    <!--FIN CARD CONTENU-->
+                </div>
+                <!-- FIN CARD 1 -->
+
+
+                <!-- DEBUT CARD 2 -->
+                <div class="card mb-4">
+                    <!-- DEBUT CARD IMAGE 2 -->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="spa_pictures/soins/soin-evasion_hotelcop.png" alt="Soin evasion HotelCOP">
+                        <a href="#">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!-- FIN CARD IMAGE 2 -->
+
+
+                    <!--DEBUT CARD CONTENU 2 -->
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h4 class="card-title">Soin évasion</h4>
+                        <p class="card-text">
+                            Une parenthèse de beauté et de bien-être suspendu, hors du temps.
+                            <br>Prendre son temps et se réserver une parenthèse de beauté,
+                            <br>seul(e) ou à deux.
+                            <br>Fermez les yeux... Vous ne vous êtes jamais senti(e) autant détendu(e).
+                        </p>
+                        <button type="button" class="btn btn-light-blue btn-md">Réserver</button>
+                    </div>
+                    <!--FIN CARD CONTENU 2 -->
+                </div>
+                <!-- FIN CARD 2 -->
+
+            </div>
+            <!-- FIN CARD DECK 2 -->
+        </div>
+        <!-- FIN DU BLOCK CARD -->
+    </div>
+    <!-- FIN DU DECK HIDE -->
+
+
+
+
+
+
+
+    <!-- DEBUT DES BLOCK 1 2 3 4 5-->
+
+    <div class="container-fluid p-0 pb-5">
+
+
+
+        <!-- DEBUT BLOCK SPA 1 -->
+
+        <div id="row1" class="row pb-5 align-items-center text-center justify-content-center">
+            <figure class="col-12 col-md-4 p-0 order-1">
+                <img class="image1 img-fluid" src="spa_pictures/accueil-spa_hotelcop.png" alt="Jacouzzi HotelCOP">
+            </figure>
+            <div class="col-12 col-md-4 spa-block order-2">
+                <h4 class="mb-5">Un accueil particulier vous est réservé.</h4>
+                <p>
+                    Lors de votre arrivée, vous serez immédiatement pris en charge par l'un de nos expert,
+                    <br>s'en suivra un examen approfondie de vos besoins selon vos demandes.
+                    <br>Vous entrerez alors dans un cocon de bien-être inoubliable.
+                    <br>Afin de prolonger les bienfaits de votre thérapie à domicile,
+                    <br>nos experts vous délivrerons des exercices ainsi que des conseils nutritionnels.
+                </p>
+
+            </div>
+            <figure class="col-12 col-md-4 p-0 text-center order-3">
+                <img class="image1 img-fluid" src="spa_pictures/soins_hotelcop.png" alt="Soin au gommant HotelCOP">
+            </figure>
+        </div>
+
+
+        <!-- FIN BLOCK SPA 1 -->
+
+
+
+
+
+
+
+
+
+        <!-- DEBUT BLOCK SPA 2 -->
+        <div id="row2" class="column text-center spa-block-mid">
+            <figure class="col-12 p-0">
+                <img class="image-bandeau w-100 img-fluid" src="spa_pictures/fleur-spa_hotelcop.jpg" alt="Bandeau bois et fleurs HotelCOP">
+            </figure>
+            <div class="col-12 spa-block order-md-1">
+                <h4 class="d-flex flex-column align-items-center mb-5">
+                    Trois espaces... une multitude de combinaisons
+                </h4>
+
+                <p>
+                    Sauna ou hammam ? Détente ou séance de sport ?
+                    <br>Pourquoi choisir ?
+                    <br>Profitez des trois espaces à votre guise.
+                </p>
+            </div>
+        </div>
+
+        <!-- FIN BLOCK SPA 2 -->
+
+
+
+
+        <!-- DEBUT BLOCK SPA 3-->
+        <div id="row3" class="row align-items-center text-center pb-5">
+            <figure class="col-12 col-md-6 p-0">
+                <img class="image1 img-fluid" src="spa_pictures/sauna-spa_hotelcop.png" alt="Sauna HotelCOP">
+            </figure>
+            <div class="col-12 col-md-6 spa-block spa-block-r">
+                <h4 class="mb-5">Le sauna</h4>
+                <p class="text-center text-md-left">
+                    Le sauna,
+                    <br>tradition nordique, procure avant tout détente et relaxation pour le corps et l’esprit.
+                    <br>Les propriétés du sauna sont reconnues comme bienfaiteur contre le stress et les rhumatismes,
+                    <br>il est également très indiqué pour les poumons, la peau ou encore les muscles.
+                    <br>Vous avez la possibilité de privatiser le spa et ainsi profiter en toute intimité de
+                    <br>son décor ineffable à l'ambiance tamisée.
+                </p>
+            </div>
+        </div>
+        <!-- FIN BLOCK SPA 3-->
+
+
+
+
+
+
+
+
+
+
+        <!-- DEBUT BLOCK SPA 4 -->
+        <div id="row4" class="row align-items-center text-center py-5">
+            <figure class="col-12 col-md-6 p-0 order-md-2">
+                <img class="image1 img-fluid" src="spa_pictures/hammam-spa_hotelcop.png" alt="Hammam HotelCOP">
+            </figure>
+            <div class="col-12 col-md-6 spa-block order-md-1 spa-block-l">
+                <h4 class="mb-5">Le hammam</h4>
+                <p class="text-center text-md-right">
+                    Les bienfaits des bains de vapeur sont multiples :
+                    <br>Détente des muscles, soulagement des courbatures et élimination des toxines.
+                    <br>Deux hammams composés d’une salle chaude et d’une salle tiède sont à votre disposition.
+                    <br>Chaque hammam peut être privatisé.
+                </p>
+            </div>
+        </div>
+        <!-- FIN BLOCK SPA 4 -->
+
+
+
+
+        <!-- DEBUT BLOCK SPA 5 -->
+        <div id="row5" class="row align-items-center text-center py-5">
+            <figure class="col-12 col-md-6 p-0 order-md-1">
+                <img class="image1 img-fluid" src="spa_pictures/fitness_hotelcop.png" alt="Salle de fitness HotelCOP">
+            </figure>
+            <div class="col-12 col-md-6 spa-block order-md-2 spa-block-r">
+                <h4 class="mb-5">
+                    L'espace fitness
+                </h4>
+                <p class="text-center text-md-left">
+                    Cet espace vous permet de profiter de vélos debout, allongé ou elliptique ainsi que de rameurs,
+                    <br>Kinésis, charges libres, barre de danse et espalier.
+                    <br>Profitez également des tapis de course dernières générations SKILLRUN
+                    <br>et ses 4 programmes d’entrainement permettant d’améliorer
+                    <br>votre vitesse, votre puissance, votre agilité et votre endurance.
+                </p>
+
+            </div>
+        </div>
+        <!-- FIN BLOCK SPA 5 -->
+
+    </div>
+
+    <!-- FIN DES BLOCK 1 2 3 4 5 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="../index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl">
+                    <li><a href="../mentions-legal/mentions-legal.html">Mentions légales</a></li>
+                    <li><a href="../cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="../plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="../qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="../acces/acces.html">Accès</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="../evenements/evenements.html">Evènements</a></li>
+                    <li><a href="../actualites/actualites.html">Actualités</a></li>
+                    <li><a href="../actualites/actualites.html">Presse</a></li>
+                    <li><a href="../newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+    <!-- FIN FOOTER -->
+
+<script src="../index/index_bis.js"></script>
+<script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+<script src="hide_spa.js"></script>
+
+
+</body>
+</html>

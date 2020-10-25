@@ -1,0 +1,38 @@
+.recrutement{
+    background-color: whitesmoke;
+    color: black;
+}
+.contact_button_rh{
+    background-color: whitesmoke;
+    height: 30px;
+    border: 0.1rem solid #C2A362;
+}
+.contact_button_rh:hover{
+    color: #C2A362;
+    font-weight: bold;
+}
+
+.card{
+    background-color: #27374C;
+    color: whitesmoke;
+}
+
+h3{
+    color: #C2A362;
+}
+
+
+
+@media screen and (min-width: 1200px){
+    .adresse{
+        padding-left: 80px;
+    }
+}
+
+.pos{
+    top: 0;
+}
+
+.recrutement_pad{
+    padding-top: 29px;
+}

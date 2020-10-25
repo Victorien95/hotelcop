@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="L'HotelCOP 5 étoiles vous propose une restauration d'une qualitée extraordinaire.
+    Grâce à son chef 2 fois étoilé Julien Randank. Une magnifique brasserie et un bar sont également à votre disposition."/>
+
+    <link href="../extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+
+    <script src="../extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="restaurant.css">
+    <link rel="stylesheet" href="../index/index.css">
+
+    <title>La restauration à l'HôtelCOP</title>
+</head>
+
+
+<body>
+
+
+    <!-- MENU HAMBURGER CACHE -->
+    <!--
+    Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+     la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+     pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+     -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="../index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="../restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="../spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="../evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="../actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="../reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="../panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="../acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="../avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="../newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+    <!-- MENU HAMBURGER CACHE FIN -->
+
+
+    <!-- DEBUT HEADER -->
+    <header class="container-fluid px-0 position-fixed pos">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 col-sm-4 row">
+                <button class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-2 text-center justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center"><a href="../index.html"><img id="myLogoImg" src="../index/pictures/include/logo_full.svg" class="" alt="Logo HotelCOP"></a></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="../reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block"><a href="../panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none ">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav mx-0">
+            <ul class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="../restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="../spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="../index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+    <!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+
+    <!------DEBUT RESTAURANT------->
+    <div class="container-fluid px-0 resto_pad">
+
+        <div id="ancre_restaurant" class="row align-items-center justify-content-center py-5">
+            <h2>Nos services de restauration</h2>
+        </div>
+
+
+        <!------DEBUT CARTE 1------->
+        <div class="row col-12 px-0 mx-0 py-3 justify-content-center">
+            <div class="row col-12 col-lg-10 col-xl-8 px-0 align-items-center text-center">
+                <div class="col-12 px-0 col-md-6">
+                    <div class="px-0">
+                        <img class="img-fluid col-12 px-0 zoom" src="picture/carte-restaurant-du-soir_hotelcop.png" alt="Plat du restaurant HotelCOP">
+                    </div>
+
+                </div>
+                <div id="restaurant" class="col-12 col-md-6 pt-2 pt-md-0">
+                    <div class="row py-5 justify-content-center align-items-center carte">
+                        <h4 class="col-12">Le restaurant HôtelCop</h4>
+                        <p>
+                            <strong>L'une des meilleures cuisine de Paris</strong>.
+                            <br>Venez déguster une cuisine d'exception,
+                            <br>des mets concoctés par notre chef étoilé Julien Randank
+                            <br>au cœur de l'HôtelCop dans un lieu raffiné
+                            <br>qui parfait une ambiance intimiste.
+                        </p>
+                        <span id="ancre_brasserie" class="col-12"><button class="resto_button" onclick="window.open('picture/cartes/carte_restaurant.pdf', '_blank')">Voir la carte</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------FIN CARTE 1------->
+
+
+
+        <!------DEBUT CARTE 2 ------->
+        <div class="row col-12 px-0 mx-0 py-3 justify-content-center">
+            <div class="row col-12 col-lg-10 col-xl-8 px-0 align-items-center text-center">
+                <div class="col-12 px-0 col-md-6 order-md-2">
+                    <div class="px-0">
+                        <img class="img-fluid col-12 px-0 zoom" src="picture/plat-restaurant_hotelcop.png" alt="Plat de la brasserie HotelCOP">
+                    </div>
+
+                </div>
+                <div id="brasserie" class="col-12 col-md-6 pt-2 pt-md-0 order-md-1">
+                    <div class="row py-5 justify-content-center align-items-center carte">
+                        <h4 class="col-12">La brasserie</h4>
+                        <p>L’un des temples des <strong>bistrots parisiens.</strong>
+                            <br>Nous vous invitons à faire un voyage dans le temps.
+                            <br>Découvrez le service impeccable des années vingt effectuer tel un ballet de serveurs
+                            <br>aux petits soins pour les clients.
+                            <br>Venez déguster des viandes tendrement savoureuses, déclinés de multiples façons.
+                        </p>
+                        <span id="ancre_degustation" class="col-12"><button class="resto_button" onclick="window.open('picture/cartes/carte_brasserie.pdf', '_blank')">Voir la carte</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------FIN CARTE 2------->
+
+
+
+        <!------DEBUT CARTE 3------->
+        <div class="row col-12 px-0 mx-0 py-3 justify-content-center">
+            <div class="row col-12 col-lg-10 col-xl-8 px-0 align-items-center text-center">
+                <div class="col-12 px-0  col-md-6">
+                    <div class="px-0">
+                        <img class="img-fluid col-12 px-0 zoom" src="picture/cocktail_hotelcop.png" alt="Degustation HotelCOP">
+                    </div>
+
+                </div>
+                <div id="degustation" class="col-12 col-md-6 pt-2 pt-md-0">
+                    <div class="row py-5 justify-content-center align-items-center carte">
+                        <h4 class="col-12">Degustation</h4>
+                        <p>
+                            Une ambiance unique à paris.
+                            <br><strong>Nos serveurs magiciens</strong> vous émerveilleront
+                            <br>directement à votre table.
+                            <br>Venez découvrir notre large choix de cocktails
+                            <br>aux fruits de saison.
+                        </p>
+                        <span class="col-12"><button class="resto_button" onclick="window.open('picture/cartes/carte_degustation.pdf', '_blank')">Voir la carte</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------FIN CARTE 3 ------->
+    </div>
+    <!------ FIN RESTAURANT------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="../index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl">
+                    <li><a href="../mentions-legal/mentions-legal.html">Mentions légal</a></li>
+                    <li><a href="../cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="../plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="../qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="../acces/acces.html">Accès</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="../evenements/evenements.html">Evènements</a></li>
+                    <li><a href="../actualites/actualites.html">Actualités</a></li>
+                    <li><a href="../actualites/actualites.html">Presse</a></li>
+                    <li><a href="../newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+    <!-- FIN FOOTER -->
+
+<script src="../index/index_bis.js"></script>
+<script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
+</body>
+</html>

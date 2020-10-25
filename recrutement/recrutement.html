@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Rejoignez l'équipe de l'Hotelcop et ses 250 collaborateurs."/>
+
+    <link href="../extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+
+    <script src="../extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="recrutement.css">
+    <link rel="stylesheet" href="formulaire.css">
+    <link rel="stylesheet" href="../index/index.css">
+
+    <title>Formulaire de recrutement HôtelCOP</title>
+</head>
+
+<body>
+
+
+
+
+    <!-- MENU HAMBURGER CACHE -->
+    <!--
+    Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+     la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+     pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+     -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="../index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="../restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="../spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="../evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="../actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="../reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="../panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="../acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="../avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="../newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+    <!-- MENU HAMBURGER CACHE FIN -->
+
+
+    <!-- DEBUT HEADER -->
+    <header class="container-fluid px-0 position-fixed pos">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 col-sm-4 row">
+                <button class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-2 text-center justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center"><a href="../index.html"><img id="myLogoImg" src="../index/pictures/include/logo_full.svg" class="" alt="Logo HotelCOP"></a></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="../reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block"><a href="../panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none ">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0 ">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav mx-0">
+            <ul class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="../restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="../spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="../index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+    <!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+    <div class="container my-5 recrutement_pad">
+
+        <!--DEBUT FORM CONTENEUR-->
+        <form id="myForm" class="form_section mb-5 mt-5" action="#">
+            <!-- CONTENEUR FORM 1 -->
+            <div class="card">
+                <!-- CONTENEUR FORM 2 -->
+                <div class="container2 row">
+
+                    <!-- DEBUT DES INPUTS -->
+                    <div class="col-lg-8">
+                        <div class="card-body myForm">
+                            <!-- TITRE -->
+                            <div class="recrutement_head d-flex flex-column align-items-center mb-5">
+                                <h3 class="font-weight-bold mt-4 mb-4">Recrutement</h3>
+                                <div>
+                                    <p>Vous vous reconnaissez dans le <strong>service d'hotellerie</strong> ?
+                                        <br>Vous souhaitez être acteur de notre belle aventure ?</p>
+                                    <p>Transmettez-nous votre candidature en remplissant le formulaire ci-dessous:</p>
+                                </div>
+                            </div>
+
+
+
+                            <!-- DEBUT LIGNE 1 -->
+                            <div class="row align-items-center mb-3">
+                                <!-- DEBUT GENRE -->
+                                <div class="col-md-3">
+                                    <div class="md-form mb-0 mySexe">
+                                        <label for="monsieur">M.</label>
+                                        <input type="radio" id="monsieur" name="sexe" value="H" class="mr-3">
+                                        <label for="madame">Mme</label>
+                                        <input type="radio" id="madame" name="sexe"  value="F">
+                                    </div>
+                                </div>
+                                <!-- FIN GENRE -->
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mb-2">
+                                    <div class="md-form mb-0">
+                                        <span id="sexeSpan" class="warning_span">Selectionnez un choix</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+
+                            </div>
+                            <!-- FIN LIGNE 1 -->
+
+                            <!-- DEBUT LIGNE 2 -->
+
+                            <div class="row align-items-center">
+                                <!-- DEBUT NOM -->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <label for="input_nom">Nom*</label>
+                                        <input type="text" id="input_nom" placeholder="Ex: Dupont" required class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN NOM -->
+
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mb-5 mb-md-0">
+                                    <div class="md-form mb-0">
+                                        <span id="nameSpan" class="warning_span">Deux caractères minimum</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+                            </div>
+                            <!-- FIN LIGNE 2 -->
+
+
+                            <!-- DEBUT LIGNE 3 -->
+
+                            <div class="row align-items-center">
+                                <!-- DEBUT PRENOM -->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <label for="input_prenom">Prenom*</label>
+                                        <input name="firstName" type="text" id="input_prenom" minlength="2" placeholder="Ex: Jean" required class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN PRENOM -->
+
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mb-5 mb-md-0">
+                                    <div class="md-form mb-0">
+                                        <span id="prenomSpan" class="warning_span">Deux caractères minimum</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+                            </div>
+                            <!-- FIN LIGNE 3 -->
+
+
+
+
+
+                            <!-- DEBUT LIGNE 3 -->
+                            <div class="row align-items-center">
+                                <!-- DEBUT EMAIL -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_email">Email*</label>
+                                        <input type="email" id="input_email" placeholder="Ex: accueil@hotelcop.com" required class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN EMAIL -->
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mb-5 mb-md-0">
+                                    <div class="md-form mb-0">
+                                        <span id="emailSpan" class="warning_span">Six caractères minimum</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+                            </div>
+                            <!-- FIN LIGNE 3 -->
+
+
+
+                            <!-- DEBUT LIGNE 4 -->
+
+                            <div class="row align-items-center">
+                                <!-- DEBUT TELEPHONE -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_tel" class="">Téléphone*</label>
+                                        <input type="text" id="input_tel" minlength="10" placeholder="Ex: 0654363689" required class="active form-control">
+                                    </div>
+                                </div>
+                                <!-- FIN TELEPHONE -->
+
+                                <!-- DEBUT SPAN -->
+                                <div class="col-md-4 mt-3 mb-5 mb-md-0">
+                                    <div class="md-form mb-0">
+                                        <span id="telSpan" class="warning_span">Dix chiffres minimum</span>
+                                    </div>
+                                </div>
+                                <!-- FIN span -->
+                            </div>
+                            <!-- FIN LIGNE 4 -->
+
+
+
+                            <div class="row pt-5">
+                                <!-- DEBUT CV -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_cv">Déposez votre CV*</label>
+                                        <input type="file" id="input_cv"  class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN CV -->
+
+                                <!-- DEBUT LM -->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_lettre" class="">Déposez votre lettre de motivation*</label>
+                                        <input type="file" id="input_lettre"  class="form-control">
+                                    </div>
+                                </div>
+                                <!-- FIN LM -->
+                            </div>
+
+
+                            <!-- DEBUT ENTREPRISE -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <label for="input_entreprise">Entreprise:</label>
+                                        <input type="text" id="input_entreprise" placeholder="Ex: HotelCOP" minlength="2" class="form-control mb-3">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN ENTREPRISE -->
+
+
+
+                            <!-- DEBUT TEXTEAREA + BUTTON -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <label for="contact_message">Message:</label>
+                                        <textarea id="contact_message" placeholder="Ajoutez un message pour nous en dire plus" class="form-control md-textarea" rows="7"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                <div>
+                                    <span><i>* Merci de remplir les champs obligatoires</i></span>
+                                </div>
+                                <div class="d-flex">
+                                    <input type="reset" class="contact_button_rh mt-5 mr-3" value="Annuler">
+                                    <input type="submit" class="contact_button_rh mt-5" value="Envoyer">
+                                </div>
+                            </div>
+                            <!-- FIN TEXTEAREA + BUTTON -->
+                        </div>
+                    </div>
+                    <!-- FIN DES INPUTS -->
+
+                    <!-- DEBUT CONTACT HOTEL -->
+                    <div class="col-lg-4">
+                        <div class="card-body recrutement text-center h-100 white-text">
+                            <img src="picture/logo_min.svg" alt="hotel_cop_logo" style="width: 150px; padding-bottom: 50px">
+                            <i class="d-block">Service Recrutement</i>
+                            <hr class="hr-light bg-dark my-4">
+                            <ul class="text-lg-left list-unstyled ml-4 mt-5">
+                                <li>
+                                    <p class="pr-2">Adresse: 1 Avenue Montaigne, <br><span class="adresse">78008 PARIS</span></p>
+                                </li>
+                                <li>
+                                    <p class="pr-2">Service RH: 01 48 52 36 36</p>
+                                </li>
+                                <li>
+                                    <p class="pr-2">Email: recrutement@hotelcop.com</p>
+                                </li>
+                            </ul>
+                            <hr class="hr-light bg-dark my-4">
+                            <p>
+                                <span class="pr-2"><a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a></span>
+                                <span class="pr-2"><a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a></span>
+                                <span class="pr-2"><a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a></span>
+                                <span class="pr-2"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></span>
+                                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FIN CONTACT HOTEL -->
+                </div>
+                <!-- FIN CONTENEUR FORM 2 -->
+            </div>
+            <!-- FIN CONTENEUR FORM 1 -->
+        </form>
+        <!--FIN FORM CONTENEUR-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="../index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigaton">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl">
+                    <li><a href="../mentions-legal/mentions-legal.html">Mentions légales</a></li>
+                    <li><a href="../cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="../plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigaton">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="../qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="../acces/acces.html">Accès</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="../evenements/evenements.html">Evènements</a></li>
+                    <li><a href="../actualites/actualites.html">Actualités</a></li>
+                    <li><a href="../actualites/actualites.html">Presse</a></li>
+                    <li><a href="../newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+    <!-- FIN FOOTER -->
+<script src="../index/index_bis.js"></script>
+<script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="formulaire.js"></script>
+
+
+
+</body>
+</html>

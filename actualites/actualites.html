@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Suivez l'actualitée hotelière, gastronomique et touristique sur le site de l'Hotelcop"/>
+
+    <link href="../extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+
+    <script src="../extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="actualites.css">
+    <link rel="stylesheet" href="../index/index.css">
+
+    <title>Presse et actualités de l'HôtelCOP</title>
+</head>
+
+<body>
+
+
+
+
+<!-- MENU HAMBURGER CACHE -->
+<!--
+Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+ la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+ pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+ -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="../index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="../restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="../spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="../evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="../actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="../reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="../panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="../acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="../avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="../newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+    <!-- MENU HAMBURGER CACHE FIN -->
+
+
+    <!-- DEBUT HEADER -->
+    <header class="container-fluid px-0 position-fixed pos">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 col-sm-4 row">
+                <button class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-2 text-center justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center"><img id="myLogoImg" src="../index/pictures/include/logo_full.svg" class="" alt="Logo HotelCop"></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="../reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block"><a href="../panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none ">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav mx-0">
+            <ul class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="../restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="../spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="../index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+    <!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+
+
+
+    <!--DEBUT ACTUALITES 1 -->
+
+    <div class="container my-5 actu_pad">
+
+        <!-- DEBUT SECTION ACTUALITE-->
+        <section class="magazine-section dark-grey-text">
+
+            <!-- TITRE ACTUALITES -->
+            <h3 class="text-center font-weight-bold mb-4 pb-2">Magasine HôtelCop</h3>
+            <h4 class="text-center font-weight-bold mb-5"><i>Hôtellerie</i></h4>
+
+            <!-- CONTENEUR DES NEWS -->
+            <div class="row">
+                <!-- DEBUT NEWS PRINCIPAL -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <!-- DEBUT NEWS -->
+                    <div class="news">
+                        <!-- IMAGE BLOCK -->
+                        <div class="mb-4">
+                            <img class="img-fluid" src="pictures/actu1_hotelcop.jpg" alt="Livre Guide Michelin 2020 HotelCOP">
+                        </div>
+                        <!-- FIN IMAGE BLOCK -->
+
+
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Hôtellerie</h6>
+                            <p class="font-weight-bold dark-grey-text">28/01/2020</p>
+                        </div>
+
+                        <h3 class="font-weight-bold dark-grey-text mb-3">
+                            L'HôtelCop dans le top 10 du classement des meilleurs hôtels 5 étoiles de Paris
+                        </h3>
+                        <p class="dark-grey-text">Ce 22 janvier, le <strong>magazine Luxe Infinity</strong> spécialisé dans la notation des domaines relatifs au luxe
+                            (voitures, hôtelerie, mode, joaillerie, etc...) a sorti le <strong>classement des 10 meilleurs hôtels 5 étoiles de Paris dont l'HôtelCop fait maintenant partie</strong>!
+                            Ce classement prend en compte la qualité des chambres, la gastronomie, la qualité des installations mais également le bien-être des employés de l'établissement.</p>
+                    </div>
+                    <!-- FIN NEWS -->
+                </div>
+                <!-- FIN NEWS PRINCIPAL -->
+
+                <!-- DEBUT NEWS SECONDAIRE -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <!-- DEBUT SECONDAIRE 1-->
+                    <div class="news mb-4">
+
+                        <div class="row">
+                            <!--DEBUT IMAGE-->
+                            <div class="col-md-3">
+                                <div class="mb-4">
+                                    <img class="img-fluid" src="pictures/actu2_hotelcop.jpg" alt="Entrée du 15m2 Paris 4 étoiles HotelCOP">
+                                </div>
+                            </div>
+                            <!--FIN IMAGE-->
+
+                            <!-- DEBUT TEXTE 1 -->
+                            <div class="col-md-9">
+
+                                <!-- Excerpt -->
+                                <p class="font-weight-bold dark-grey-text">25/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="http://hr-infos.fr/reservations-centralisees-et-cartes-de-fidelite-ont-le-vent-en-poupe-chez-logis/" target="blank">
+                                            Bond des réservations centralisées et des cartes<br>de fidélité chez Logis
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN TEXTE 1 -->
+                        </div>
+                    </div>
+                    <!-- FIN SECONDAIRE 1-->
+
+                    <!-- DEBUT SECONDAIRE 2-->
+                    <div class="news mb-4">
+                        <div class="row">
+                            <!--DEBUT IMAGE 2-->
+                            <div class="col-md-3">
+                                <div class="mb-4">
+                                    <img class="img-fluid" src="pictures/actu3_hotelcop.jpg" alt="Accueil le Modrian Bordeaux HotelCOP">
+                                </div>
+                            </div>
+                            <!--FIN IMAGE 2-->
+
+                            <!-- DEBUT TEXTE 2 -->
+                            <div class="col-md-9">
+                                <p class="font-weight-bold dark-grey-text">17/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-lg-3">
+                                        <a href="http://hr-infos.fr/accor-lance-sur-la-france-cannes-et-bordeaux-la-marque-premium-mondrian/" class="dark-grey-text" target="blank">
+                                            Accor débute à Cannes et Bordeaux le<br>lancement Européen de Mondrian</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <!-- FIN TEXTE 2 -->
+
+                        </div>
+                    </div>
+                    <!-- FIN SECONDAIRE 2-->
+
+                    <!-- DEBUT SECONDAIRE 3-->
+                    <div class="news mb-4">
+
+                        <div class="row">
+
+                            <!--DEBUT IMAGE 3-->
+                            <div class="col-md-3">
+                                <div class="mb-4">
+                                    <img class="img-fluid" src="pictures/actu4_hotelcop.jpeg" alt="Camping avec vue sur le lac de Sainte-Croix HotelCOP">
+                                </div>
+                            </div>
+                            <!--FIN IMAGE 3-->
+
+                            <!-- DEBUT TEXTE 3 -->
+                            <div class="col-md-9">
+
+                                <p class="font-weight-bold dark-grey-text">16/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="http://hr-infos.fr/ralentissement-quasi-general-de-la-hausse-des-prix-dans-les-hcr/" class="dark-grey-text" target="blank">
+                                            Ralentissement quasi général de la hausse des<br>prix dans les HCR</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- FIN TEXTE 3 -->
+                        </div>
+                    </div>
+                    <!-- FIN SECONDAIRE 3-->
+
+                    <!-- DEBUT SECONDAIRE 4 -->
+                    <div class="news">
+
+                        <div class="row">
+
+                            <!--DEBUT IMAGE 4-->
+                            <div class="col-md-3">
+
+                                <div class="mb-md-0 mb-4">
+                                    <img class="img-fluid" src="pictures/actu5_hotelcop.jpg" alt="Château 4 étoiles Chapeau Cornu HotelCOP">
+                                </div>
+
+                            </div>
+                            <!--FIN IMAGE 4-->
+
+                            <!-- DEBUT TEXTE 4 -->
+                            <div class="col-md-9">
+                                <p class="font-weight-bold dark-grey-text">15/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="http://hr-infos.fr/chateaux-demeures-rejoint-logis-hotels/" class="dark-grey-text" target="blank">
+                                            Châteaux & Demeures rejoint Logis Hotels</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- FIN TEXTE 4 -->
+
+                        </div>
+
+                    </div>
+                    <!-- FIN SECONDAIRE 4 -->
+
+                </div>
+                <!-- FIN NEWS SECONDAIRE -->
+
+            </div>
+            <!-- FIN CONTENEUR DES NEWS -->
+        </section>
+        <!-- FIN SECTION ACTUALITE-->
+    </div>
+    <!--FIN ACTUALITES 1 -->
+
+
+
+
+    <!--DEBUT ACTUALITES 2 -->
+
+    <div class="container my-5">
+
+        <!-- DEBUT SECTION ACTUALITE-->
+        <section class="magazine-section dark-grey-text">
+
+            <!-- TITRE ACTUALITES -->
+            <h4 class="text-center font-weight-bold mb-5"><i>Gastronomie - Restauration</i></h4>
+
+            <!-- CONTENEUR DES NEWS -->
+            <div class="row">
+                <!-- DEBUT NEWS PRINCIPAL -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <!-- DEBUT NEWS -->
+                    <div class="news">
+                        <!-- IMAGE BLOCK -->
+                        <div class="mb-4">
+                            <img class="img-fluid" src="pictures/actu6_hotelcop.jpg" alt="Julien Randank au restaurant HotelCOP">
+                        </div>
+                        <!-- FIN IMAGE BLOCK -->
+
+
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Restauration</h6>
+                            <p class="font-weight-bold dark-grey-text">30/01/2020</p>
+                        </div>
+
+                        <h3 class="font-weight-bold dark-grey-text mb-3">
+                            Julien Randank chef 2 étoiles de l'HôtelCop président du jury Meilleur Ouvrier de France
+                        </h3>
+                        <p class="dark-grey-text"> <strong> Le chef 2 étoiles de l'Hôtelcop, Julien Randank présidera
+                            le jury de la prochaine élection du Meilleur Ouvrier de France </strong> catégorie dessert original.
+                            La compétition se déroulera le 12 mai 2020 au parc des expositions de Toulouse.<br>Le chef Mika Creno
+                            officiant au Riversdale Palace de Madrid fera également partie du Jury.
+                        </p>
+                    </div>
+                    <!-- FIN NEWS -->
+                </div>
+                <!-- FIN NEWS PRINCIPAL -->
+
+                <!-- DEBUT NEWS SECONDAIRE -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <!-- DEBUT SECONDAIRE 1-->
+                    <div class="news mb-4">
+
+                        <div class="row">
+                            <!--DEBUT IMAGE-->
+                            <div class="col-md-3">
+                                <div class="mb-4">
+                                    <img class="img-fluid" src="pictures/actu7_hotelcop.jpg" alt="Le chef Emile Jung, dans son restaurant à Strasbourg HotelCOP">
+                                </div>
+                            </div>
+                            <!--FIN IMAGE-->
+
+                            <!-- DEBUT TEXTE 1 -->
+                            <div class="col-md-9">
+
+                                <!-- Excerpt -->
+                                <p class="font-weight-bold dark-grey-text">28/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="https://www.lemonde.fr/disparitions/article/2020/01/28/le-chef-etoile-strasbourgeois-emile-jung-est-mort_6027526_3382.html"  class="dark-grey-text" target="blank">
+                                            Le chef étoilé strasbourgeois Emile Jung est mort</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN TEXTE 1 -->
+                        </div>
+                    </div>
+                    <!-- FIN SECONDAIRE 1-->
+
+                    <!-- DEBUT SECONDAIRE 2-->
+                    <div class="news mb-4">
+
+                        <div class="row">
+                            <!--DEBUT IMAGE 2-->
+                            <div class="col-md-3">
+                                <div class="mb-4">
+                                    <img class="img-fluid" src="pictures/actu8_hotelcop.jpg" alt="panier de choux verts bio HotelCOP">
+                                </div>
+                            </div>
+                            <!--FIN IMAGE 2-->
+
+                            <!-- DEBUT TEXTE 2 -->
+                            <div class="col-md-9">
+
+                                <p class="font-weight-bold dark-grey-text">25/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="http://hr-infos.fr/des-restaurants-desormais-certifiables-en-bio-sur-la-base-des-quantites-achetees/" class="dark-grey-text" target="blank">
+                                            Les restaurants désormais certifiables « Bio » <br>selon les quantités achetées</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- FIN TEXTE 2 -->
+
+                        </div>
+                    </div>
+                    <!-- FIN SECONDAIRE 2-->
+
+                    <!-- DEBUT SECONDAIRE 3-->
+                    <div class="news mb-4">
+
+                        <div class="row">
+
+                            <!--DEBUT IMAGE 3-->
+                            <div class="col-md-3">
+                                <div class="mb-4">
+                                    <img class="img-fluid" src="pictures/actu9_hotelcop.jpg" alt="Vignes de Bordeaux HotelCOP">
+                                </div>
+                            </div>
+                            <!--FIN IMAGE 3-->
+
+                            <!-- DEBUT TEXTE 3 -->
+                            <div class="col-md-9">
+
+                                <p class="font-weight-bold dark-grey-text">24/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="https://www.lemonde.fr/m-gastronomie/article/2020/01/24/dans-les-vignobles-de-pommard-histoire-d-une-conversion-au-bio_6027059_4497540.html" class="dark-grey-text" target="blank">
+                                            Dans les vignobles de Pommard, histoire d’une<br>conversion au bio</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- FIN TEXTE 3 -->
+
+                        </div>
+                    </div>
+                    <!-- FIN SECONDAIRE 3-->
+
+                    <!-- DEBUT SECONDAIRE 4 -->
+                    <div class="news">
+
+                        <div class="row">
+
+                            <!--DEBUT IMAGE 4-->
+                            <div class="col-md-3">
+
+                                <div class="mb-md-0 mb-4">
+                                    <img class="img-fluid" src="pictures/actu10_hotelcop.jpg" alt="Baguettes bien cuites HotelCOP">
+                                </div>
+
+                            </div>
+                            <!--FIN IMAGE 4-->
+
+                            <!-- DEBUT TEXTE 4 -->
+                            <div class="col-md-9">
+
+                                <p class="font-weight-bold dark-grey-text">21/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-lg-3">
+                                        <a href="https://www.lemonde.fr/m-le-mag/article/2020/01/21/avec-les-defenseurs-de-la-baguette-bien-cuite_6026708_4500055.html" class="dark-grey-text" target="blank">
+                                            Avec les défenseurs de la baguette « bien cuite »</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- FIN TEXTE 4 -->
+
+                        </div>
+
+                    </div>
+                    <!-- FIN SECONDAIRE 4 -->
+
+                </div>
+                <!-- FIN NEWS SECONDAIRE -->
+
+            </div>
+            <!-- FIN CONTENEUR DES NEWS -->
+        </section>
+        <!-- FIN SECTION ACTUALITE-->
+    </div>
+    <!--FIN ACTUALITES 2 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--DEBUT ACTUALITES 1 -->
+
+    <div class="container my-5">
+
+        <!-- DEBUT SECTION ACTUALITE-->
+        <section class="magazine-section dark-grey-text">
+
+            <!-- TITRE ACTUALITES -->
+            <h4 class="text-center font-weight-bold mb-5"><i>Tourisme</i></h4>
+
+            <!-- CONTENEUR DES NEWS -->
+            <div class="row">
+                <!-- DEBUT NEWS PRINCIPAL -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <!-- DEBUT NEWS -->
+                    <div class="news">
+                        <!-- IMAGE BLOCK -->
+                        <div class="mb-4">
+                            <img class="img-fluid" src="pictures/actu11_hotelcop.jpg" alt="Musée du Louvre vue aérienne HotelCOP">
+                        </div>
+                        <!-- FIN IMAGE BLOCK -->
+
+
+                        <div class="d-flex justify-content-between">
+                                <h6 class="font-weight-bold">Tourisme</h6>
+                            <p class="font-weight-bold dark-grey-text">27/01/2020</p>
+                        </div>
+
+                        <h3 class="font-weight-bold dark-grey-text mb-3">
+                            <a>L'HôtelCop s'associe au musée du Louvre</a>
+                        </h3>
+                        <p class="dark-grey-text">Un <strong>partenariat vient d'être signé entre le musée du louvre et l'HôtelCop</strong>.
+                            En effet ce partenariat a pour but de <strong>développer les visites du musée du Louvre</strong> et ses annexes pour une clientèle aisée et cherchant un programme différent de ceux proposés par les guides classiques.</p>
+                    </div>
+                    <!-- FIN NEWS -->
+                </div>
+                <!-- FIN NEWS PRINCIPAL -->
+
+                <!-- DEBUT NEWS SECONDAIRE -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <!-- DEBUT SECONDAIRE 1-->
+                    <div class="news mb-4">
+
+                        <div class="row">
+                            <!--DEBUT IMAGE-->
+                            <div class="col-md-3">
+                                <div class="mb-4">
+                                    <img class="img-fluid" src="pictures/actu12_hotelcop.jpg" alt="L'Outrigger Mauritius Beach Resort HotelCOP">
+                                </div>
+                            </div>
+                            <!--FIN IMAGE-->
+
+                            <!-- DEBUT TEXTE 1 -->
+                            <div class="col-md-9">
+
+                                <!-- Excerpt -->
+                                <p class="font-weight-bold dark-grey-text">26/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="http://www.quotidiendutourisme.com/hebergement/ile-maurice-air-austral-et-outrigger-prolongent-leur-challenge-de-vente/192155" class="dark-grey-text" target="blank">Ile Maurice: Air Austral et Outrigger prolongent<br> leur challenge de vente</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN TEXTE 1 -->
+                        </div>
+                    </div>
+                    <!-- FIN SECONDAIRE 1-->
+
+                    <!-- DEBUT SECONDAIRE 2-->
+                    <div class="news mb-4">
+
+                        <div class="row">
+                            <!--DEBUT IMAGE 2-->
+                            <div class="col-md-3">
+                                <div class="mb-4">
+                                    <img class="img-fluid" src="pictures/actu13_hotelcop.jpg" alt="Avion de la Norwegian sur le tarmac HotelCOP">
+                                </div>
+                            </div>
+                            <!--FIN IMAGE 2-->
+
+                            <!-- DEBUT TEXTE 2 -->
+                            <div class="col-md-9">
+
+                                <p class="font-weight-bold dark-grey-text">24/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="http://www.quotidiendutourisme.com/transport/norwegian-la-gratuite-du-bagage-cabine-cest-termine/192117" class="dark-grey-text" target="blank">Norwegian : la gratuité du bagage cabine ?<br> C’est terminé !</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- FIN TEXTE 2 -->
+
+                        </div>
+                    </div>
+                    <!-- FIN SECONDAIRE 2-->
+
+                    <!-- DEBUT SECONDAIRE 3-->
+                    <div class="news mb-4">
+
+                        <div class="row">
+
+                            <!--DEBUT IMAGE 3-->
+                            <div class="col-md-3">
+                                <div class="mb-4">
+                                    <img class="img-fluid" src="pictures/actu14_hotelcop.jpg" alt="Le bureau de la Cotal autour de son président, Rémi Vénitien HotelCOP">
+                                </div>
+                            </div>
+                            <!--FIN IMAGE 3-->
+
+                            <!-- DEBUT TEXTE 3 -->
+                            <div class="col-md-9">
+
+                                <p class="font-weight-bold dark-grey-text">24/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="http://www.quotidiendutourisme.com/destination/mieux-vendre-lamerique-latine-rendez-vous-au-nouveau-workshop-de-la-cotal/191994" class="dark-grey-text" target="blank">Mieux vendre l’Amérique latine: rendez-vous <br> au prochain workshop de la Cotal</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- FIN TEXTE 3 -->
+
+                        </div>
+                    </div>
+                    <!-- FIN SECONDAIRE 3-->
+
+                    <!-- DEBUT SECONDAIRE 4 -->
+                    <div class="news">
+
+                        <div class="row">
+
+                            <!--DEBUT IMAGE 4-->
+                            <div class="col-md-3">
+
+                                <div class="mb-md-0 mb-4">
+                                    <img class="img-fluid" src="pictures/actu15_hotelcop.jpg" alt="Jeune femme portant un casque de réalité virtuelle HotelCOP">
+                                </div>
+
+                            </div>
+                            <!--FIN IMAGE 4-->
+
+                            <!-- DEBUT TEXTE 4 -->
+                            <div class="col-md-9">
+
+                                <p class="font-weight-bold dark-grey-text">13/01/2020</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-lg-3">
+                                        <a href="http://www.quotidiendutourisme.com/distribution/comment-vos-clients-voyageront-en-2040/191941" class="dark-grey-text" target="blank">Comment vos clients voyageront en 2040 ?</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- FIN TEXTE 4 -->
+
+                        </div>
+
+                    </div>
+                    <!-- FIN SECONDAIRE 4 -->
+
+                </div>
+                <!-- FIN NEWS SECONDAIRE -->
+
+            </div>
+            <!-- FIN CONTENEUR DES NEWS -->
+        </section>
+        <!-- FIN SECTION ACTUALITE-->
+    </div>
+    <!--FIN ACTUALITES 3 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="../index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl">
+                    <li><a href="../mentions-legal/mentions-legal.html">Mentions légales</a></li>
+                    <li><a href="../cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="../plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="../qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="../acces/acces.html">Accès</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="../evenements/evenements.html">Evènements</a></li>
+                    <li><a href="../actualites/actualites.html">Actualités</a></li>
+                    <li><a href="../actualites/actualites.html">Presse</a></li>
+                    <li><a href="../newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+<!-- FIN FOOTER -->
+<script src="../index/index_bis.js"></script>
+<script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
+
+
+
+</body>
+</html>

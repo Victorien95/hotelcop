@@ -1,0 +1,22 @@
+@media screen and (max-width: 750px) {
+    .mention_pad{
+        padding-top: 69px;
+    }
+}.my-qsm-container{
+    background-color: white;
+}
+@media screen and (min-width: 400px){
+    .my-qsm-container{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .my-qsm-container{
+        width: 90%;
+    }
+}
+
+body{
+    background-color: lightgrey;
+}

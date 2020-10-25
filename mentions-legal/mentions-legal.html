@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="Lisez les mentions légales de l'Hotelcop 5 étoiles"/>
+
+    <link href="../extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+
+    <script src="../extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="mention-legal.css">
+    <link rel="stylesheet" href="../index/index.css">
+
+    <title>Mentions légales HotelCOP 5 étoiles</title>
+</head>
+
+<body>
+
+
+
+
+<!-- MENU HAMBURGER CACHE -->
+<!--
+Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+ la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+ pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+ -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="../index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="../restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="../spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="../evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="../actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="../reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="../panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="../acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="../avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="../newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+    <!-- MENU HAMBURGER CACHE FIN -->
+
+
+    <!-- DEBUT HEADER -->
+    <header class="container-fluid px-0 position-fixed">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 col-sm-4 row">
+                <button class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-2 text-center justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center"><a href="../index.html"><img id="myLogoImg" src="../index/pictures/include/logo_full.svg" class="" alt="Logo HotelCOP"></a></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="../reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block"><a href="../panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0 ">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav mx-0">
+            <ul class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="../restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="../spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="../index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+    <!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+    <!--DEBUT MENTIONS LEGALES-->
+
+    <div class="container-fluid my-qsm-container rounded mention_pad">
+        <div class="row align-items-center justify-content-center py-5">
+            <h3 class="text-center pt-5">Mentions légales</h3>
+        </div>
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-10 col-lg-8 py-5 rounded">
+                <p>
+                    Statut du propriétaire : societe <br>
+                    Préfixe : SAS <br>
+                    Nom de la Société : HOTELCOP <br>
+                    Adresse : 1 avenue Montaigne 75008 PARIS <br>
+                    Tél : 0145635314 <br>
+                    Au Capital de : 123812763472 € <br>
+                    SIRET : 273872676191 <br>
+                    Adresse de courrier électronique : contact@hotelcop.fr <br>
+                </p>
+                <p>
+                    Le Créateur du site est : http://www.hotelcop.fr <br>
+                    Les Responsables de la publication sont : Idy WATT  - Victorien FATON <br>
+                    Contactez le responsable de la publication : idyvictorien@gmail.com <br>
+                    Le responsable de la publication est une personne morale <br>
+
+                <p>
+                    Le Webmasters sont : Idy WATT  et Victorien Faton
+                    Contactez le Webmaster : idyvictorien@gmail.com
+                </p>
+
+                <p>
+                    L’hebergeur du site est: PlanetHoster 4416 Louis B. Mayer Québec H7P 0G1 Canada
+                </p>
+
+                <div class="mt-lg-5">
+                    <h4>Loi Informatique et Libertés</h4>
+                    <p>
+                        Conformément à la Loi Informatique et Libertés, vous disposez d’un droit d’accès, de modification,
+                        de rectification et de suppression des données à caractère personnel qui vous concernent
+                        (article 394 de la Loi Informatique et Libertés du 6 janvier 1978 modifiée en août 2004).
+                    </p>
+                </div>
+                <div class="mt-lg-5">
+                    <h4>Accès au site</h4>
+                    <p>
+                        Il est rappelé que le fait d’accéder ou de se maintenir frauduleusement dans un système informatique,
+                        d’entraver ou de fausser le fonctionnement d’un tel système, d’introduire ou de modifier frauduleusement
+                        des données dans un système informatique constituent des délits passibles de sanctions pénales.
+                    </p>
+                </div>
+                <div class="mt-lg-5">
+                    <h4>Contenu du site</h4>
+                    <p>
+                        L'HotelCOP se réserve le droit de corriger, à tout moment et sans préavis, le contenu de ce site.
+                        En outre, L'HotelCOP décline toute responsabilité en cas de retard, d’erreur ou d’omission quant au
+                        contenu des présentes pages de même qu’en cas d’interruption ou de non-disponibilité du service.
+                    </p>
+                </div>
+                <div class="mt-lg-5">
+                    <h4>Traitement automatisé d’informations nominatives</h4>
+                    <p>
+                        L'HotelCOP ne collecte sur les visiteurs de son site aucune autre information nominative ou
+                        personnelle que celles qui lui sont ouvertement et volontairement fournies, en particulier par
+                        l’intermédiaire des adresses électroniques de ses correspondants
+                    </p>
+                </div>
+                <div class="mt-lg-5">
+                    <h4>Liens Hypertextes</h4>
+                    <p>
+                        Le site de L'HotelCOP contient des liens hypertextes permettant l’accès à des sites qui ne
+                        sont pas édités par L'HotelCOP. En conséquence ce dernier ne saurait être tenu pour responsable
+                        du contenu des sites auxquels l’internaute aurait ainsi accès.
+                    </p>
+                </div>
+                <div class="mt-lg-5">
+                    <h4>Protection des biens et des personnes - gestion des données personnelles</h4>
+                    <p>
+                        En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier
+                        1978, la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.<br>
+                    </p>
+                    <p>
+                        Conformément aux dispositions des articles 38 et suivants de la loi 78-17 du 6 janvier 1978
+                        relative à l’informatique, aux fichiers et aux libertés, tout utilisateur dispose d’un droit d’accès,
+                        de rectification, de suppression et d’opposition aux données personnelles le concernant. Pour l’exercer,
+                        adressez votre demande à www.hotelcop.fr par email : email du webmaster ou en effectuant sa demande écrite et signée,
+                        accompagnée d’une copie du titre d’identité avec signature du titulaire de la pièce, en précisant l’adresse à laquelle la réponse doit être envoyée.<br>
+                    </p>
+                    <p>
+                        Aucune information personnelle de l'utilisateur du site www.hotelcop.fr n'est publiée à l'insu
+                        de l'utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers.
+                        Seule l'hypothèse du rachat du site www.hotelcop.fr à le proprietaire du site et de ses droits
+                        permettrait la transmission des dites informations à l'éventuel acquéreur qui serait à son tour
+                        tenu de la même obligation de conservation et de modification des données vis à vis de l'utilisateur du site www.hotelcop.fr .<br>
+                    </p>
+                    <p>
+                        Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant
+                        la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FIN MENTIONS LEGALES-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="../index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl">
+                    <li><a href="../mentions-legal/mentions-legal.html">Mentions légales</a></li>
+                    <li><a href="../cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="../plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="../qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="../acces/acces.html">Accès</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="../evenements/evenements.html">Evènements</a></li>
+                    <li><a href="../actualites/actualites.html">Actualités</a></li>
+                    <li><a href="../actualites/actualites.html">Presse</a></li>
+                    <li><a href="../newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+    <!-- FIN FOOTER -->
+<script src="../index/index_bis.js"></script>
+<script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
+
+
+
+
+
+</body>
+</html>

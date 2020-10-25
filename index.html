@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="L'Hotelcop 5 étoiles est situé au coeur de Paris et vous proposera un séjour unique.
+    Les plus belles chambres couplées à une haute gastronomie et un magnifique spa vous raviront. A l'Hotelcop vous rêves deviennent réalité">
+
+    <link href="extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="index/index.css">
+    <link rel="stylesheet" href="index/home.css">
+
+    <script src="extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <script src="extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
+    <script src="index/index_header.js"></script>
+
+    <link rel="stylesheet" href="index/hide.css">
+
+
+
+
+
+    <title>HôtelCOP 5 étoiles - Accueil</title>
+</head>
+
+
+<body>
+
+    <!-- MENU HAMBURGER CACHE -->
+    <!--
+    Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+     la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+     pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+     -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+    <!-- MENU HAMBURGER CACHE FIN -->
+
+
+<!-- DEBUT HEADER -->
+    <header id="myHeader" class="container-fluid px-0 position-fixed">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 row">
+                <button id="#ham_button" class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-4 text-center justify-content-center px-0 align-items-center">
+                <div class="d-flex flex-column justify-content-center"><img id="myLogoImg" src="index/pictures/include/logo_full.svg" class="" alt="Logo HotelCOP"></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block mr-2"><a href="panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none col-12 mx-0">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav">
+            <ul id="nav_li" class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+    <!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- CAROUSEL BIG -->
+
+
+
+    <div class="container-fluid px-0">
+        <div class="row mx-0">
+            <div id="carouselExampleIndicatorsStandard" class="carousel slide col-12 px-0" data-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img id="big_hotel" class="col-12 px-0 mx-0" src="index/pictures/home/acceuil-porte_hotelcop.png" alt="Entrée de l'hotelCOP">
+                    </div>
+                    <!--<div class="carousel-item">
+                        <img class="col-12 px-0 mx-0" src="index/pictures/home/tour-eiffel_hotelcop.jpg" alt="Tour Effeil Hotelcop">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+
+<!-- CAROUSEL BIG -->
+
+
+        <!-- ROW 1 -->
+        <div id="row1" class="row mx-0 py-5 align-items-center justify-content-center myDiv">
+
+            <!-- IMAGE 1 -->
+            <div class="col-12 col-lg-5 px-0  text-center order-2 order-lg-1">
+                <img class="img-class col-12 px-0" src="index/pictures/home/chambre_hotelcop_standard.jpg" alt="Chambre standard HotelCOP">
+            </div>
+
+            <!-- ACCOLADE 1 -->
+            <div class="d-none d-lg-block col-md-1 px-0 text-center order-lg-2">
+                <img class="col-5 col-lg-4 accolade px-0" src="index/pictures/home/accolade_right.svg" alt="">
+            </div>
+
+            <!-- TEXTE 1 -->
+            <div class="col-12 col-lg-5 text-center px-0 py-5 py-md-0 order-1 order-lg-3">
+                <div class="col-12 px-0">
+                    <h4>Chambres de gamme <br>Standard et Confort</h4>
+                    <p>
+                        <br>Chacune de nos chambres est unique
+                        <br>mais toutes offrent l'espace, le confort et l'<strong>insonorisation</strong> nécessaire
+                        <br>pour faire de votre visite un moment intime inoubliable.
+                        <br>Vous n'aurez plus qu'à contempler une vue exceptionnelle
+                        <br>sur les <strong>toits de Paris.</strong>
+                    </p>
+                    <p class="pt-3">
+                        <a class="home_link" href="hebergement/hebergement.html">Voir les chambres</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- ROW 1 -->
+
+
+
+        <!-- ROW 2 -->
+        <div id="row2" class="row mx-0 py-5 align-items-center justify-content-center myDiv">
+
+            <!-- IMAGE 2 -->
+            <div class="col-12 col-lg-5 px-0  text-center order-3">
+                <img class="img-class col-12 px-0" src="index/pictures/home/chambre_hotelcop_suite.jpg" alt="Chambre suite HotelCOP">
+            </div>
+
+            <!-- ACCOLADE 2 -->
+            <div class="d-none d-lg-block col-md-1 px-0 text-center order-2">
+                <img class="col-5 col-lg-4 accolade px-0" src="index/pictures/home/accolade_left.svg" alt="accolade">
+            </div>
+
+            <!-- TEXTE 2 -->
+            <div class="col-12 col-lg-5 text-center px-0 py-5 py-md-0 order-1">
+                <div class="col-12 px-0">
+                    <h4>Chambres de gamme <br>Deluxe et Suites</h4>
+                    <p>
+                        <br>Ces gammes de chambres disposent d'un salon indépendant.
+                    </p>
+                    <p>
+                        <br>Chacune de nos suites est imaginée par le célèbre décorateur d'intérieur <strong>Gianni Depolo.</strong>
+                        <br>Elles offrent la possibilité d'être séparé en deux espaces distincts.
+                    </p>
+                    <p class="pt-3">
+                        <a class="home_link" href="hebergement/hebergement.html">Voir les chambres</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- ROW 2 -->
+
+
+
+
+
+
+        <!-- HR 1 -->
+        <hr class="w-75">
+
+        <!-- ROW 3 -->
+        <div id="row3" class="row mx-0 py-5 align-items-center justify-content-center text-center">
+            <!-- TEXTE 3 -->
+            <h4 class="col-12 pb-5">LE RESTAURANT</h4>
+            <!-- IMAGE 3 -->
+            <img id="img_resto" class="col-12 col-lg-10 px-0" src="index/pictures/home/restaurant_hotelcop_cuisine.jpg" alt="Cuisine HotelCOP">
+        </div>
+        <!-- ROW 3 -->
+
+
+
+        <!-- ROW 4 -->
+        <div id="row4" class="row mx-0 py-5 align-items-center justify-content-center">
+
+            <!-- IMAGE 4 A RETOUCHER POUR DOUBLER -->
+            <div class="col-12 col-lg-5 px-0 text-center order-2 order-lg-1">
+                <img class="img-class col-12 px-0" src="index/pictures/home/restaurant_hotelcop_plat.jpg" alt="Plat du restaurant HotelCOP">
+            </div>
+
+            <!-- ACCOLADE 4 -->
+            <div class="d-none d-lg-block col-md-1 px-0 text-center order-lg-2">
+                <img class="col-5 col-lg-5 accolade px-0" src="index/pictures/home/accolade_right.svg" alt="accolade">
+            </div>
+
+            <!-- TEXTE 4 -->
+            <div class="col-12 col-lg-5 text-center px-0 py-5 py-md-0 order-1 order-lg-3">
+                <div class="col-12 px-0">
+                    <h4>Voyage culinaire</h4>
+                    <p>
+                        <br>L'HôtelCOP vous invite à la découverte d'une cuisine d'exception.
+                    </p>
+                    <p>
+                        Notre chef étoilé <strong>Julien Randank</strong> <br>vous accueillera au cœur de l'hôtel.
+                    </p>
+                    <p>
+                        Vous pourrez également profiter d'autres saveurs,
+                        <br>dans une ambiance<strong> brasserie typique des années vingt.</strong>
+                    </p>
+                    <p class="pt-3">
+                        <a class="home_link" href="restaurant/restaurant.html">Voir les menus</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ROW 4 -->
+
+
+        <!-- ROW 5 THE BIG -->
+        <div id="row5" class="row mx-0 py-5 align-items-center justify-content-center">
+            <img class="col-12 col-lg-11 px-0" src="index/pictures/home/restaurant_hotelcop_facade.jpg" alt="Restaurant HotelCOP">
+
+        </div>
+        <!-- ROW 5 -->
+
+
+        <!-- HR 2 -->
+        <hr class="w-75">
+
+
+
+        <!-- ROW 6 -->
+        <div id="row6" class="row mx-0 py-5 align-items-center justify-content-center">
+
+            <!-- IMAGE 6  -->
+            <div class="col-12 col-lg-5 px-0  text-center">
+                <img class="img-class col-12 px-0" src="index/pictures/home/spa_hotelcop.jpg" alt="">
+            </div>
+
+            <!-- ACCOLADE 6 -->
+            <div class="d-none d-lg-block col-md-1 px-0 text-center">
+                <img class="col-5 col-lg-5 accolade px-0" src="index/pictures/home/accolade_right.svg" alt="accolade">
+            </div>
+
+            <!-- TEXTE 6 -->
+            <div class="col-12 col-lg-5 text-center px-0 py-5 py-md-0">
+                <div class="col-12 px-0">
+                    <h4>LE SPA</h4>
+                    <p>
+                        <br><strong>Bienvenue dans l'un des plus beaux spas de Paris.</strong>
+                    </p>
+                    <p>
+                        Dans un cocon de bien-être où quiétude et professionnalisme
+                        <br>s'harmonisent au service de votre beauté, vous pourez profiter
+                        <br>d'une <strong>salle de remise en forme</strong>,d'un <strong>sauna</strong> et d'un <strong>hammam</strong>.
+                    </p>
+                    <p>
+                        Nos esthéticiennes vous invitent à un voyage immobile.
+                        <br>Profitez d'un moment de bien-être <br>grâce à l'un des <strong>massages spa traditionnel</strong> revisités.
+                    </p>
+                    <p>
+                        Un havre de paix au coeur de Paris.
+                    </p>
+                    <p class="pt-3">
+                        <a class="home_link" href="spa/spa.html">Voir l'espace spa</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- ROW 6 -->
+
+
+        <!-- ROW 7 -->
+        <div id="row7" class="row mx-0 py-5 align-items-center justify-content-center">
+
+            <!-- IMAGE 7 -->
+            <div class="col-12 col-lg-5 px-0  text-center order-3">
+                <img id="img_spa" class="img-class col-12 px-0" src="index/pictures/home/golf_hotelcop.jpg" alt="Golf HotelCOP">
+            </div>
+
+            <!-- ACCOLADE 7 -->
+            <div class="d-none d-lg-block col-md-1 px-0 text-center order-2">
+                <img class="col-5 col-lg-5 accolade px-0" src="index/pictures/home/accolade_left.svg" alt="accolade">
+            </div>
+
+            <!-- TEXTE 7 -->
+            <div class="col-12 col-lg-5 text-center px-0 py-5 py-md-0 order-1">
+                <div class="col-12 px-0">
+                    <h4>LE GOLF</h4>
+                    <p>
+                        <br>Dans une atmosphère unique, en plein coeur de Paris,
+                        <br>notre golf offre la possibilité d'entrainer votre swing <br>auprès de professionnel qualifié.
+                    </p>
+                    <p>
+                        Venez découvrir ses paysages enchanteurs et sa forêt luxuriante tout au long de nos différents parcours.
+                        <br><strong>Le cours de 18 trous</strong> vous offrira une expérience étonnante.
+                    </p>
+                    <p>
+                        L'un des plus beaux de France,
+                        <br><strong>l'HôtelCop est partenaire du Versailles Country Club.</strong>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- ROW 7 -->
+
+
+
+
+
+        <!-- ROW 8 -->
+
+        <div id="last_row" class="row align-items-center justify-content-center py-5">
+            <figure class="col-12 col-md-4 p-0 text-center order-1">
+                <img class="img-class img-fluid" src="index/pictures/home/arc-de-triomphe_hotelcop.png" alt="Arc de triomphe HotelCOP">
+            </figure>
+            <div class="col-12 col-md-4 text-justify text-center d-flex flex-column justify-content-center spa-block order-2">
+                <h4 class="d-flex flex-column align-items-center">A VISITER</h4>
+                <p>
+                    <br><strong>Niché au coeur de Paris</strong>, l'HôtelCop est un point de départ idéal pour toutes vos visites.
+                </p>
+                <p>
+                    De nombreux <strong> lieux mythiques sont à proximité de l'hôtel, tel que la Tour Eiffel,
+                    <br>l'avenue des Champs-Elysées ou l'Arc de Triomphe</strong>.
+                </p>
+                <p>
+                    L'HôtelCop est partenaire du musée du Louvre.
+                    <br>Des visites personnalisées peuvent vous être proposées.
+                </p>
+
+            </div>
+            <figure class="col-12 col-md-4 p-0 text-center order-3">
+                <img class="img-class img-fluid" src="index/pictures/home/louvre_hotelcop.png" alt="Louvre HotelCOP">
+            </figure>
+        </div>
+        <!-- ROW 9 -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche Navigation">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl myWhite">
+                    <li><a href="mentions-legal/mentions-legal.html">Mentions légales</a></li>
+                    <li><a href="cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche Navigation">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="acces/acces.html">Accès</a></li>
+                    <li><a href="contact/contact.html">Contact</a></li>
+                    <li><a href="recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche Navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="evenements/evenements.html">Evènements</a></li>
+                    <li><a href="actualites/actualites.html">Actualités</a></li>
+                    <li><a href="actualites/actualites.html">Presse</a></li>
+                    <li><a href="newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3 myWhite">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+    <!-- FIN FOOTER -->
+<script src="index/index_header.js"></script>
+<script src="extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+<script src="index/hide.js"></script>
+
+
+</body>
+</html>

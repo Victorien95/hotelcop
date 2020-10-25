@@ -1,0 +1,107 @@
+h4{
+    color: #C2A362;
+    font-weight: bold;
+}
+.hebergementTitle{
+    margin-top: 100px;
+}
+#hebergement{
+    margin-top: 100px;
+    color: #C2A362;
+    font-weight: bold;
+}
+
+.ul_convenience li{
+    list-style: disc;
+}
+
+.room_pad{
+    padding-top: 59px;
+}
+/*DEBUT CHAMBRE DE LUXE*/
+/*DEBUT MENU CACHER ET SES BUTTONS*/
+
+.room_container{
+    font-size: 13px;
+}
+h5{
+    font-size: 16px ;
+}
+
+.room_img{
+    width: 30px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.convenience{
+    border-top: #1E1D1A solid 0.01rem;
+}
+.separateur{
+    width: 40px;
+    min-width: 10px;
+}
+
+.title, .button_container{
+    border: none;
+}
+
+.ul_convenience ul li{
+    list-style: outside;
+}
+
+.myMin-width{
+    min-width: 230px;
+}
+
+.reserve_button{
+    width: 150px;
+    min-width: 50px;
+    color: #1E1D1A;
+    background-color: whitesmoke;
+    border: 0.1rem solid #C2A362;
+}
+
+.span_button{
+    height: 50px;
+}
+
+.close_button{
+    width: 50px;
+    min-width: 50px;
+}
+
+.open_button{
+    height: 60px;
+    width: 150px;
+    min-width: 50px;
+    color: black;
+    background-color: whitesmoke;
+    border: 0.1rem solid #C2A362;
+}
+
+.open_button:hover, .reserve_button:hover{
+    color:#C2A362;
+    background-color: #27374c;
+    border: none;
+}
+
+.ul_convenience li{
+    padding: 5px;
+}
+
+/*FIN MENU CACHER ET SES BUTTONS*/
+/*FIN CHAMBRE DE LUXE*/
+
+/*CAROUSEL*/
+.carousel-control-next{
+    margin-right: 5%;
+}
+
+hr{
+    color: #27374C;
+    height: 3px;
+    width: 75%;
+    background-color: #27374c;
+    border-radius: 0.25rem;
+}

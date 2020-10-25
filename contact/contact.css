@@ -1,0 +1,60 @@
+h3{
+    color: #C2A362;
+}
+.contact_pad{
+    padding-top: 59px;
+}
+
+@media screen and (min-width: 760px) {
+    .contact_pad{
+        padding-top: 0;
+    }
+}
+
+.card{
+    border: #C2A362 2px solid;
+}
+.contact{
+    background-color: #27374C;
+    color: #C2A362;
+}
+.contact_button{
+    background-color: whitesmoke;
+    height: 30px;
+    border: 0.1rem solid #C2A362;
+}
+.contact_button:hover{
+    color: #C2A362;
+    background-color: #27374C;
+    border: none;
+}
+
+/*.myRaison{
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}*/
+
+.fab{
+    font-size: 30px;
+    color: #C2A362;
+}
+.hr-light{
+    background-color: #C2A362;
+}
+@media screen and (min-width: 1200px){
+    .adresse{
+        padding-left: 80px;
+
+    }
+}

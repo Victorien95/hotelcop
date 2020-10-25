@@ -1,0 +1,29 @@
+.contact_button_nl{
+    background-color: whitesmoke;
+    height: 30px;
+    border: 0.1rem solid #C2A362;
+}
+.contact_button_nl:hover{
+    color: #C2A362;
+    background-color: #27374C;
+    border: none;
+}
+
+.card{
+    background-color: whitesmoke;
+    border: #C2A362 2px solid;
+}
+
+.news_pad{
+    padding-top: 59px;
+}
+
+
+.pos{
+    top: 0;
+}
+
+h3{
+    color: #C2A362;
+    font-weight: bold;
+}

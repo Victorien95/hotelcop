@@ -1,0 +1,117 @@
+.nav-item{
+    color: #27374c;
+}
+.avis_pad{
+    padding-top: 69px;
+}
+/*------------   Formulaire     --------------*/
+
+strong{
+    color: black;
+    font-weight: normal;
+}
+.contact{
+    background-color: #27374C;
+    color: whitesmoke;
+}
+.contact_button{
+    background-color: white;
+    height: 30px;
+    border: 2px solid #C2A362;
+}
+.contact_button:hover{
+    color: #C2A362;
+    background-color: #27374C;
+    border: none;
+    height: 30px;
+}
+
+
+
+
+/*------------   Etoiles     --------------*/
+
+.rating {
+    direction: rtl;
+}
+.rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+}
+.rating a:hover,
+.rating a:focus,
+.rating a:active,
+.rating a:hover ~ a,
+.rating a:active ~ a,
+.rating a:focus ~ a {
+    color: orange;
+    cursor: pointer;
+}
+
+.star_size{
+    font-size: 0.75rem;
+    padding-top: 5px;
+}
+
+
+.tab-content{
+    border: #dee2e6 solid 0.01rem;
+    border-top: none;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+/*------------   Partie avis interne     --------------*/
+
+
+
+.etoile{
+    color: orange;
+    font-size: 1.3em
+}
+
+.etoile2{
+    font-size: 1.3em;
+}
+
+
+/*------------   Générale     --------------*/
+.nav-link{
+    color: black;
+}
+
+.nav-link:hover{
+    color: #C2A362;
+}
+
+.nav-tabs .nav-link.active{
+    color: #C2A362;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 993px) {
+    .nav-tabs .nav-link{
+        border: #dee2e6 solid 0.01rem;
+    }
+    #nav-spa-tab{
+        border-top: none;
+    }
+}
+
+
+h1, h3{
+    color: #C2A362;
+    font-weight: bold;
+}
+
+
+
+
+h6{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}

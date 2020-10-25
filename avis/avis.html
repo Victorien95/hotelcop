@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="L'HotelCOP Hotel 5 étoiles noté 4,8/5 en moyenne par ses clients
+    grâce au charme de ses chambres, de son restaurant et de son magnifique spa.
+    Vous avez séjourné à l'HotelCOP ou êtes déja venus pour vous y restaurer? Vous aussi donnez votre avis."/>
+
+    <link href="../extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="../extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../index/index.css">
+    <link rel="stylesheet" href="avis.css">
+
+
+
+
+
+    <title>HôtelCOP 5 étoiles - Acceuil</title>
+</head>
+
+
+<body>
+    <!-- MENU HAMBURGER CACHE -->
+    <!--
+    Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+     la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+     pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+     -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="../index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="../restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="../spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="../evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="../actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="../reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="../panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="../acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="../avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="../newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+    <!-- MENU HAMBURGER CACHE FIN -->
+
+
+    <!-- DEBUT HEADER -->
+    <header class="container-fluid px-0 position-fixed">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 col-sm-4 row">
+                <button class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-2 text-center justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center"><img id="myLogoImg" src="../index/pictures/include/logo_full.svg" class="" alt="Logo HotelCOP"></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="../reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block"><a href="../panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none col-12 mx-0">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav">
+            <ul class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="../restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="../spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="../index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+<!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+
+    <!-- INTEGRATION -->
+
+
+
+    <!-- DEBUT AVIS CONTENEUR -->
+
+    <div>
+    <div class="avis_container col-12 mb-5 d-flex flex-column align-items-center justify-content-center avis_pad">
+        <!-- DEBUT AVIS CONTENEUR CENTRER -->
+        <h1 class="text-center py-5">Avis de nos clients HôtelCOP </h1>
+
+        <div class="avis_container_center col-12 col-sm-8 mt-5">
+            <!-- DEBUT ONGLET + CONTENU -->
+            <nav>
+                <div class="nav nav-tabs d-flex flex-column flex-sm-row" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active col-12 col-sm-3 text-center myNav" id="nav-hotel-tab" data-toggle="tab" href="#nav-hotel">Hôtel</a>
+                    <a class="nav-item nav-link col-12 col-sm-3 text-center myNav" id="nav-room-tab" data-toggle="tab" href="#nav-room">Chambres</a>
+                    <a class="nav-item nav-link col-12 col-sm-3 text-center myNav" id="nav-resto-tab" data-toggle="tab" href="#nav-resto">Restaurants</a>
+                    <a class="nav-item nav-link col-12 col-sm-3 text-center myNav" id="nav-spa-tab" data-toggle="tab" href="#nav-spa">Spa</a>
+                </div>
+            </nav>
+            <div class="tab-content pt-0 mt-0" id="nav-tabContent">
+
+
+
+
+
+                <!-- DEBUT HOTEL -->
+                <div class="tab-pane fade show active" id="nav-hotel">
+                    <div class="col-10 offset-1 mt-0 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around pt-5">
+                                <span>Julian</span>
+                                <span>Le 20/01/2020</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Superbe séjour</h6>
+                                <span class="etoile ml-2">★★★★☆</span>
+                            </div>
+                            <p>Nous avons passé un très bon moment en famille.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Mathieu</span>
+                                <span>Le 15/01/2020</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Exellent séjour</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Hotel très bien placé et un personnel au petits soins pour ses clients.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Christian</span>
+                                <span> Le 12/12/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Un endroit magnifique</h6>
+                                <span class="etoile ml-2 pt">★★★★☆</span>
+                            </div>
+                            <p>Nous avons passé 5 jours à l'HôtelCop avec nos enfants. Placé au centre de Paris, l'hôtel permet de visiter pas mal de choses à pied.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Maria</span>
+                                <span>Le 17/11/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Tres bon accueil</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Nous avons séjourné dans cet hôtel pour notre voyage de noces et nous ne regretons vraiment pas.
+                                A notre arrivée, une belle surprise nous attendait dans notre chambre.<br>Nous avons pu profiter du très joli <strong>spa</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Audrey</span>
+                                <span>Le 10/11/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Un séminaire reussi!</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Notre entreprise a loué le grand salon pour 2 jours. Nous avons profité d'un service d'organisation irréprochable et très à l'écoute.
+                                La <strong>gastronomie </strong>a beaucoup plu à nos collaborateurs.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Arouna</span>
+                                <span> Le 03/05/19</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Un vrai 5 étoiles!!!</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Habitué des<strong> hotels parisiens</strong>, j'ai été surpris de la qualité des services proposés par l'hôtel. </p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- FIN HOTEL -->
+
+
+
+
+
+
+
+
+                <!-- DEBUT CHAMBRE -->
+                <div class="tab-pane fade" id="nav-room" role="tabpanel">
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around pt-5">
+                                <span>Julian</span>
+                                <span>Le 17/01/2020</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Rien à redire</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Superbe chambres.Rien à redire.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Nina</span>
+                                <span>Le 15/01/2020</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Magnifiques chambres</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Nous avons loué une <strong>chambre classique</strong> et elle était très bien équipée.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Christine</span>
+                                <span>Le 11/01/2020</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Très belle suite</h6>
+                                <span class="etoile ml-2 pt">★★★★☆</span>
+                            </div>
+                            <p>Le suite que nous avons loué avec mon mari pour notre mariage est superbe. Spacieuse et très bien équipée, nous avons apprécié la (très) grande salle de bain.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Mario</span>
+                                <span>Le 19/12/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Chambre Deluxe Trés spacieuse</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Nous n'avons manqué de rien dans la <strong>chambre Deluxe</strong>.<br>Néanmmoins, nous trouvons les toilettes et le frigo trop petits.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Nathalie</span>
+                                <span>Le 17/11/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Enfin une suite digne de ce nom</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Les 5 nuits que nous avons passées pour notre lune de miel ont été parfaites grâce au confort de cette suite.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- FIN CHAMBRE -->
+
+
+
+                <!-- DEBUT RESTAURANT -->
+                <div class="tab-pane fade" id="nav-resto" role="tabpanel">
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around pt-5">
+                                <span>Julian</span>
+                                <span>Le 20/01/2020</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Une cuisine surprenante</h6>
+                                <span class="etoile ml-2 pt">★★★★☆</span>
+                            </div>
+                            <p>Le cuisine du restaurant est très raffinée et diversifiée!</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Mike</span>
+                                <span>Le 17/01/2020</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Merci pour ce voyage</h6>
+                                <span class="etoile ml-2 pt">★★★★☆</span>
+                            </div>
+                            <p>Nous avons voyagé gustativement notamment le Homard en salade succulent.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Mina</span>
+                                <span>Le 01/01/2020</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Une cuisine fine</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Plats très raffinés et variés d'une grande qualité.Il y en a pour tous les goûts.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Marceline</span>
+                                <span>Le 19/12/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Un pur délice</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Nous avons découvert la très bonne cuisine diversifié .Même nos enfants ont adoré!</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Mariana</span>
+                                <span>Le 17/11/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Bonne cuisine mais un peu chère</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>La cuisine nous a bien plu.Par contre je trouve les plats de la carte un peu chers comparés à d'autres <strong>restaurants d'hôtels 5 étoiles.</strong></p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- FIN RESTAURANT -->
+
+
+                <!-- DEBUT SPA -->
+                <div class="tab-pane fade" id="nav-spa" role="tabpanel">
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around pt-5">
+                                <span>Julian</span>
+                                <span>Le 17/05/2018</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Un spa digne de ce nom</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Un <strong>spa magnifique</strong> digne de ce nom avec des installations magnifiques.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Mohammed</span>
+                                <span>Le 17/01/2020</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Soin détente très relaxant</h6>
+                                <span class="etoile ml-2 pt">★★★★☆</span>
+                            </div>
+                            <p>Le soin détente que j'ai pris a été très bien realisé par une masseuse qui sait vous mettre à l'aise.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Raymond</span>
+                                <span>Le 11/12/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Des masseusses aux mains de fée</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>Les deux soins que j'ai pu réaliser durant mon séjour ont été très bénéfiques. Une équipe de profesionnelles à votre service.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Martine</span>
+                                <span>Le 01/12/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Espace fitness</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>J'ai apprécié profiter des équipements de la salle de sport ainsi que des conseils du coach.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 mb-5">
+                        <div class="col-10 offset-1 border_avis pb-3">
+                            <div class="d-flex flex-column justify-content-around mt-3">
+                                <span>Sebastien</span>
+                                <span>Le 03/11/2019</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <h6>Un havre de paix</h6>
+                                <span class="etoile ml-2 pt">★★★★★</span>
+                            </div>
+                            <p>En entrant dans ce sauna, vous entrez dans une bulle de douceur et de volupté.<br>Je vous conseille le soin évasion!</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- FIN SPA -->
+            </div>
+            <!-- FIN ONGLET + CONTENU -->
+
+        </div>
+        <!-- FIN AVIS CONTENEUR CENTRER -->
+    </div>
+    <!-- FIN AVIS CONTAINER -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FORMULAIRE -->
+
+
+    <div class="container col-8 my-5">
+        <!--DEBUT FORM CONTENEUR-->
+        <form class="form_section mb-5 mt-5" action="#" method="get">
+            <!-- CONTENEUR FORM 1 -->
+            <div class="card">
+                <!-- CONTENEUR FORM 2 -->
+                <div class="container2  row">
+
+                    <!-- DEBUT DES INPUTS -->
+                    <div class="col-lg-8">
+                        <div class="card-body myForm">
+                            <!-- TITRE -->
+                            <h3 class="font-weight-bold mt-4 mb-4">Laissez nous votre avis:</h3>
+
+                            <!-- DEBUT LIGNE 1 -->
+                            <div class="row align-items-center">
+                                <!-- DEBUT GENRE -->
+                                <div class="col-md-3">
+                                    <div class="md-form mb-0 mySexe">
+                                        <label for="monsieur">M.</label>
+                                        <input type="radio" id="monsieur" name="sexe" checked value="M" class="mr-3">
+                                        <label for="madame">Mme</label>
+                                        <input type="radio" id="madame" name="sexe"  value="F">
+                                    </div>
+                                </div>
+                                <!-- FIN GENRE -->
+
+                                <!-- DEBUT NOM -->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <label for="input_nom">Nom*:</label>
+                                        <input type="text" id="input_nom" minlength="2" placeholder="Ex: Jean" required class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN NOM -->
+
+                                <!-- DEBUT PRENOM -->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <label for="input_prénom">Prénom*:</label>
+                                        <input type="text" id="input_prénom" minlength="2" placeholder="Ex: Dupont" required class="form-control mb-3">
+                                    </div>
+                                </div>
+                                <!-- FIN PRENOM -->
+                            </div>
+                            <!-- FIN LIGNE 1 -->
+
+
+                            <!-- DEBUT CATEGORIE -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="d-flex flex-column md-form mb-3 mt-3">
+                                        <label for="categorie">Sélectionnez la catégorie*: </label>
+                                        <select name="raison" id="categorie" required class="myRaison">
+                                            <option value="" selected>-</option>
+                                            <option value="restaurant">Restaurant</option>
+                                            <option value="hebergement">Hébergement</option>
+                                            <option value="spa">Spa</option>
+                                            <option value="hotel">L'hotel</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN CATEGORIE -->
+
+
+
+                            <!-- DEBUT ETOILES -->
+                            <div class="row pt-2 pl-3 pb-3 pl2">
+                                <div class="pr-3 d-flex flex-column justify-content-center"><p class="pt-4">Votre note:</p></div>
+                                <div class="rating d-flex flex-row justify-content-center star_size">
+                                    <a href="#5" title="Donner 5 étoiles">☆</a>
+                                    <a href="#4" title="Donner 4 étoiles">☆</a>
+                                    <a href="#3" title="Donner 3 étoiles">☆</a>
+                                    <a href="#2" title="Donner 2 étoiles">☆</a>
+                                    <a href="#1" title="Donner 1 étoile">☆</a>
+                                </div>
+                            </div>
+                            <!-- FIN ETOILES -->
+
+
+                            <!-- DEBUT TEXTEAREA + BUTTON -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <label for="contact_message">Votre message*:</label>
+                                        <textarea id="contact_message" required minlength="10" placeholder="Laissez-votre message" class="form-control md-textarea" rows="7"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                <i>* Merci de remplir les champs obligatoires</i>
+                                <div class="d-flex">
+                                    <input type="reset" class="contact_button mt-5 mr-3" value="Annuler">
+                                    <input type="submit" class="contact_button mt-5" value="Envoyer">
+                                </div>
+                            </div>
+                            <!-- FIN TEXTEAREA + BUTTON -->
+                        </div>
+                    </div>
+                    <!-- FIN DES INPUTS -->
+                </div>
+                <!-- FIN CONTENEUR FORM 2 -->
+            </div>
+            <!-- FIN CONTENEUR FORM 1 -->
+        </form>
+        <!--FIN FORM CONTENEUR-->
+    </div>
+
+
+    <!-- FIN FORMULAIRE -->
+
+
+
+
+
+
+
+
+    <!-- INTEGRATION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="../index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl">
+                    <li><a href="../mentions-legal/mentions-legal.html">Mentions légales</a></li>
+                    <li><a href="../cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="../plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="../qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="../acces/acces.html">Accès</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="../evenements/evenements.html">Evènements</a></li>
+                    <li><a href="../actualites/actualites.html">Actualités</a></li>
+                    <li><a href="../actualites/actualites.html">Presse</a></li>
+                    <li><a href="../newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3 myWhite">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+    <!-- FIN FOOTER -->
+    <script src="../index/index_bis.js"></script>
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
+</body>
+</html>

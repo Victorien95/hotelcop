@@ -1,0 +1,74 @@
+#restaurant{
+    background-color: #d39e00;
+}
+
+#brasserie{
+    background-color: #5c9ead;
+}
+
+#degustation{
+    background-color: #a71d2a;
+}
+
+@media screen and (min-width: 750px){
+    #degustation, #restaurant{
+        left: -15px;
+    }
+    #brasserie{
+        right: -15px;
+    }
+}
+
+.carte{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+h2{
+    color: #C2A362;
+    font-weight: bold;
+}
+
+h4{
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: black;
+}
+p > strong{
+    color: black;
+}
+p{
+    color: black;
+}
+
+.resto_pad{
+    padding-top: 69px;
+    padding-bottom: 100px;
+}
+
+
+
+@media screen and (min-width: 992px){
+    
+    .zoom {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    
+    .zoom:hover {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.1);
+    }
+    
+}
+
+.resto_button{
+    background-color: black;
+    border: 0.1rem black solid;
+    color: white;
+}
+.resto_button:hover{
+    border: none;
+    color: #C2A362;
+}

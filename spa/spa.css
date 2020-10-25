@@ -1,0 +1,70 @@
+
+h2, h4{
+    color: #C2A362;
+    font-weight: bold;
+}
+.btn-light-blue{
+    color: #C2A362;
+    font-weight: bold;
+}
+
+
+
+
+@media screen and (max-width: 750px){
+    .spa_pad{
+        padding-top: 59px;
+    }
+}
+
+
+
+
+.feature{
+    border-top: #27374c solid 3px;
+}
+
+
+#price_button{
+    border: #C2A362 solid 0.1rem;
+    background-color: whitesmoke;
+    height: 50px;
+    min-width: 200px;
+}
+#price_button:hover{
+    border: none;
+    background-color: #27374C;
+    color: #C2A362;
+}
+
+
+.card{
+    max-width: 350px;
+}
+
+
+.spa-block{
+    padding: 30px;
+}
+
+.spa-block-mid{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media screen and (min-width: 992px) {
+    .spa-block-r{
+        padding-right: 100px;
+        padding-left: 30px;
+    }
+
+    .spa-block-l{
+        padding-left: 100px;
+        padding-right: 30px;
+    }
+
+    .spa-block-mid{
+        padding-bottom: 120px;
+    }
+
+}

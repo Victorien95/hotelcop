@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Le client est informé sur le devis avant validation d'achat des Conditions Générales de Vente et peut les consulter à tout moment sur notre site."/>
+
+    <link href="../extend/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+
+    <script src="../extend/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../extend/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../extend/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/e971e3c315.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="cgv.css">
+    <link rel="stylesheet" href="../index/index.css">
+
+    <title>conditions générales de ventes - HotelCOP</title>
+</head>
+
+<body>
+
+
+
+
+<!-- MENU HAMBURGER CACHE -->
+<!--
+Le menu apparait ou disparait lorsque un évènement click est attribué au button de classe 'hamburger'
+ la fonction myHamburger en JS permet de le passer en display none ou block la fonction enlève aussi l'overflow
+ pour eviter le scroll. Elle change aussi la position fix au click et la reactive à la fermeture.
+ -->
+    <div id="myNav__hamburger" style="display: none; z-index: 1000;">
+        <ul id="myLink__hamburger" style="list-style: none; position: relative;" >
+            <li><a class="hide_link" href="../index.html">ACCUEIL</a></li>
+            <li><a class="hide_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+            <li><a class="hide_link" href="../restaurant/restaurant.html">RESTAURATION</a></li>
+            <li><a class="hide_link" href="../spa/spa.html">SPA</a></li>
+            <li><a class="hide_link" href="../evenements/evenements.html">EVENEMENTS</a></li>
+            <li><a class="hide_link" href="../actualites/actualites.html">ACTUALITES</a></li>
+            <li><a class="hide_link" href="../reservation/reservation.html">RESERVATION</a></li>
+            <li><a class="hide_link" href="../panier/panier.html">PANIER</a></li>
+            <li><a class="hide_link" href="../acces/acces.html">ACCES</a></li>
+            <li><a class="hide_link" href="../avis/avis.html">AVIS</a></li>
+            <li><a class="hide_link" href="../newsletter/newsletter.html">NEWSLETTER</a></li>
+        </ul>
+    </div>
+<!-- MENU HAMBURGER CACHE FIN -->
+
+
+<!-- DEBUT HEADER -->
+    <header class="container-fluid px-0 position-fixed">
+        <div class="row justify-content-between px-1 myHeader">
+            <!-- DEBUT BLOCK GAUCHE -->
+            <div class="col-4 col-sm-4 row">
+                <button class="hamburger hamburger--spring position-relative col-6 col-lg-4" type="button" style="z-index: 1001;">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="flex-lg-column justify-content-lg-center align-items-lg-center p-0 d-none d-lg-flex ">
+                    <span class="hamburger myBlack d-flex menuPos">MENU</span>
+                </div>
+                <div class="d-flex flex-column col-6 justify-content-center flex-sm-row align-items-sm-center col-lg-4">
+                    <a href="#" id="fr" class="myBlack pl-3 pl-sm-0 pr-1 text">FR</a>
+                    <a href="#" id="en" class="myBlack  pl-3 pl-sm-0">EN</a>
+                </div>
+            </div>
+            <!-- FIN BLOCK GAUCHE -->
+
+
+            <!-- DEBUT BLOCK LOGO -->
+            <div class="row col-4 col-sm-2 text-center justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center"><img id="myLogoImg" src="../index/pictures/include/logo_full.svg" class="" alt="Logo HotelCOP"></div>
+            </div>
+            <!-- FIN BLOCK LGOO -->
+
+
+
+            <!-- DEBUT BLOCK PANIER RESERVATION-->
+            <div class="row col-2 col-sm-4 mx-0 px-0 justify-content-between text-center align-items-center">
+                <div class="row justify-content-end justify-content-between align-items-center col-12 px-0 pr-sm-4 mt-3">
+                    <div id="glass_search" class="d-lg-none"><i class="fas fa-search"></i></div>
+                    <div class="align-items-center"><a href="../reservation/reservation.html" class="d-none d-sm-inline myBlack">RESERVATION</a></div>
+                    <div class="d-none d-sm-block"><a href="../panier/panier.html"><i class="fas fa-shopping-cart"></i></a></div>
+                    <a href="#"><i id="to_top_arrow" class="fas fa-arrow-circle-up pb-0"></i></a>
+                </div>
+            </div>
+            <!-- FIN BLOCK PANIER RESERVATION-->
+        </div>
+
+        <!-- DEBUT SEARCH BARRE HIDE -->
+
+        <div id="mySearch_hide" class="row align-items-center justify-content-center d-md-none ">
+            <label for="searchBarre2"><input type="search" class="pl-2" placeholder="Rechercher" id="searchBarre2"></label>
+        </div>
+        <!-- FIN SEARCH BARRE HIDE -->
+    </header>
+    <!-- FIN HEADER -->
+
+
+
+    <!-- DEBUT SOUS HEADER -->
+    <div id="underNav" class="container-fluid d-none d-md-block px-0 ">
+        <div class="row align-items-center justify-content-center px-5 myUnderNav mx-0">
+            <ul class="row col-8 my-0 justify-content-between">
+                <li><a class="nav_link" href="../hebergement/hebergement.html">HEBERGEMENT</a></li>
+                <li><a class="nav_link" href="../restaurant/restaurant.html">RESTAURANT</a></li>
+                <li><a class="nav_link" href="../spa/spa.html">SPA</a></li>
+                <li><a class="nav_link" href="../index.html">HOTEL</a></li>
+            </ul>
+
+            <div class="row my-0 col-4 justify-content-end">
+                <label for="searchBarre"><input class="mt-2 px-2" id="searchBarre" placeholder="Rechercher" type="text"></label>
+            </div>
+        </div>
+    </div>
+    <!-- FIN SOUS HEADER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid px-0">
+        <div class="row mx-0 align-items-center justify-content-center text-center">
+
+
+            <div class="col-10 myWhite myBorder">
+                <h3 class="mb-5">Conditions générales de ventes</h3>
+                <p>
+                    La totalité du contenu qui figure sur les pages du présent site Web est protégée par les lois sur le droit
+                    d’auteur en vigueur au Royaume-Uni, aux États-Unis et dans d’autres pays. Certains noms, mots, titres,
+                    expressions, logos, icônes, images ou dessins présents dans les pages de ce site sont susceptibles de constituer
+                    des noms commerciaux ou des marques de commerce ou de service de l'HôtelCop ou ses filiales, qui peuvent avoir été
+                    autorisées à les exploiter. La présence de noms commerciaux ou de marques de commerce ou de service dans les
+                    pages du présent site n’implique nullement qu’une licence de quelque sorte que ce soit eu été concédée à un tiers.
+                    Vous êtes libre de télécharger les éléments figurant dans le présent site à des fins non commerciales en vue de
+                    les conserver temporairement sur un unique ordinateur et de les imprimer exclusivement pour votre propre usage
+                    personnel. Vous acceptez le principe selon lequel vous n’acquérez aucun droit de propriété à l’égard des
+                    contenus téléchargés. Il vous est interdit de diffuser des copies d’éléments issus du présent site à quelque
+                    fin que ce soit ainsi que de les « framer » sur un site créé ou exploité par vous. Vous acceptez de vous
+                    conformer à l’ensemble des restrictions, informations et avis de droit d’auteur intégrés aux éléments
+                    du présent site.<br><br>
+                    Le téléchargement, la transmission, la republication, la copie et la modification non autorisée d’éléments
+                    publiés sur le présent site, y compris de noms commerciaux ou de marques de commerce ou de service, sont
+                    susceptibles d’enfreindre la législation fédérale, civile ou la common law portant sur les marques de commerce
+                    ou le droit d’auteur et peuvent entraîner des poursuites judiciaires.<br><br>
+                    The Set Hotels se réserve le droit d’intenter une action en justice en cas d’usage non autorisé des noms
+                    commerciaux, des marques de commerce et des images de l'HôtelCop et ses filiales figurant sur le présent site.
+                </p>
+
+                <h5>Exonération de garanties</h5>
+
+                <p>
+                    L'HôtelCop a rassemblé les informations du présent site en vue de leur utilisation par les clients, clients
+                    potentiels et professionnels du tourisme. Les informations, les éléments et les algorithmes logiciels contenus
+                    dans le présent site ou téléchargeables à partir du présent site, y compris les textes, les images et les
+                    hyperliens, sont fournis « en l’état » et « tels que disponibles ».<br><br>
+                    Les informations et les éléments qui figurent dans le présent site sont supposés véridiques et exhaustifs au
+                    moment de leur publication. Bien que l'HôtelCop veille à ce qu’ils restent exacts et à jour, les informations
+                    et les éléments du site sont susceptibles d’évoluer sans préavis et The Set ne garantit en rien leur véracité,
+                    leur exhaustivité et leur fiabilité constantes.<br><br>
+                    De surcroît, l'HôtelCop ne garantit pas l’exactitude, l’adéquation et l’exhaustivité des algorithmes logiciels
+                    et décline expressément toute responsabilité quant aux erreurs ou omissions au sein desdits algorithmes.<br><br>
+                    Aucune garantie de quelque sorte que ce soit, implicite, expresse ou légale, y compris, sans s’y limiter, une
+                    garantie de non-violation de droits de propriété intellectuelle ou de droits de tiers, de titre, d’absence de
+                    vices cachés, d’absence d’interruption de service, de qualité marchande, d’adéquation à un usage particulier
+                    et d’absence de virus informatiques, n’est accordée en rapport avec de quelconques informations, éléments et
+                    algorithmes logiciels.<br><br>
+                </p>
+
+                <h5>Exonération de garanties</h5>
+
+                <p>
+                    En aucun cas l'HôtelCop n’assumera une quelconque responsabilité s’agissant des dommages subis, y compris, sans
+                    s’y limiter, des dommages directs ou indirects, particuliers, accessoires, moraux ou consécutifs, des manques
+                    à gagner et des pertes de chance et d’informations, ni des charges financières associées au présent site Web,
+                    des algorithmes logiciels disponibles sur le présent site, des sites Internet dont un hyperlien figure sur le
+                    présent site, ni de l’usage ou de l’impossibilité d’utiliser ces éléments, algorithmes logiciels ou sites dont
+                    un hyperlien est présent sur notre site ayant pour cause une interruption, un défaut, un retard de traitement
+                    ou de transmission, un virus informatique ou encore une panne au niveau de la ligne de communication ou du
+                    système, ce, y compris si l'HôtelCop a été avisé de la possibilité de tels dommages, pertes ou charges.
+                    L’usage des algorithmes logiciels mis à disposition et des hyperliens pointant vers des ressources Internet
+                    tierces s’effectue à vos risques et périls.<br><br>
+                    Le contenu, l’exactitude, les opinions exprimées ainsi que les liens fournis par lesdits algorithmes logiciels
+                    et ressources ne font l’objet d’aucune enquête, vérification, surveillance ou approbation de la part
+                    de l'HôtelCop.
+                </p>
+
+                <h5>Exonération de garanties</h5>
+
+                <p>
+                    L'HôtelCop ne détient aucun contrôle sur les sites Internet de tierces parties et ne saurait par conséquent
+                    assumer une quelconque responsabilité quant au contenu des sites Web dont un hyperlien figure sur notre site,
+                    ni quant aux liens présents sur ces derniers. L'HôtelCop fournit ses liens uniquement pour des raisons de
+                    commodité, et leur intégration n’implique en rien une approbation, une enquête ou une vérification, par
+                    l'HôtelCop, des sites correspondants ni des informations que ces derniers renferment.
+                </p>
+
+                <h5>Exonération de garanties</h5>
+
+                <p>
+                    Un seul animal de compagnie pesant moins de douze (12) kilogrammes est admis, avec un coût supplémentaire de 50€
+                    par nuit, sous réserve qu’il soit tenu en laisse ou porté dans une cage de transport au niveau des parties
+                    communes. Néanmoins, pour des raisons d’hygiène, les animaux ne sont pas autorisés dans les zones de
+                    consommation de rafraîchissements aux heures de pointe (petit-déjeuner et apéritif du soir). Le Client est
+                    responsable des dommages causés par son animal de compagnie, notamment au personnel et aux équipements de
+                    l’hôtel, ainsi qu’aux autres clients et plus généralement à tout tiers.Customers who bring pets to the hotel
+                    are also informed that the cleaners will not clean any rooms where pets are still present.<br><br>
+                    Les clients sont informés du fait que le personnel n’assurera pas le ménage dans les chambres en présence
+                    d’animaux de compagnie.
+                </p>
+
+                <h5>Exonération de garanties</h5>
+
+                <p>
+                    Vous garantissez à l'HôtelCop que vous n’utiliserez pas le présent site à une quelconque fin illégale ou prohibée
+                    en vertu des présentes conditions générales et des avis. Bien qu’il puisse de temps à autre surveiller ou
+                    examiner les discussions, conversations, publications, transmissions, affichages électroniques et autres
+                    éléments de la sorte figurant sur le présent site, l'HôtelCop n’a aucune obligation d’agir en ce sens et
+                    n’assumera aucune responsabilité quant à de tels contenus ni quant aux erreurs, imprécisions, omissions,
+                    diffamations, calomnies, injures, mensonges, obscénités, vulgarités ou éléments pornographiques ou dangereux
+                    contenus dans une quelconque information publiée en de tels endroits du site.<br>
+                    Il vous est interdit de publier et de transmettre des contenus illégaux, menaçants, calomnieux, diffamatoires,
+                    obscènes, scandaleux, incendiaires, pornographiques ou vulgaires, ainsi que des contenus susceptibles de
+                    constituer ou d’encourager un comportement qui serait considéré comme une infraction pénale, qui engagerait
+                    la responsabilité civile ou qui enfreindrait d’une quelconque autre manière la loi. L'HôtelCop coopérera
+                    pleinement avec les autorités chargées de l’application de la loi et exécutera les décisions de justice lui
+                    ordonnant de divulguer l’identité de toute personne ayant publié de telles informations ou de tels contenus.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DEBUT FOOTER -->
+    <footer class="container-fluid p-0" id="footer__container">
+        <div class="row" id="nav__container">
+            <div id="head_footer" class="col-12 text-center">
+                <img id="logo_min_footer" src="../index/pictures/include/logo_full.svg" alt="Logo HotelCOP">
+            </div>
+
+            <!-- NAV 1 LIENS DIVERS -->
+            <nav id="liens_divers_nav" class="col-4 myNav">
+                <h6 id="liens_divers_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Liens Divers
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="liens_divers_ul" class="myUl">
+                    <li><a href="../mentions-legal/mentions-legal.html">Mentions légales</a></li>
+                    <li><a href="../cgv/cgv.html">Conditions générales de vente</a></li>
+                    <li><a href="../plan/plan.html">Plan du site</a></li>
+                    <li><a href="javascript:window.print()">Imprimer la page</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 1 LIENS DIVERS -->
+            <!-- NAV 2 LIENS HOTEL -->
+            <nav id="hotel_nav" class="col-4 myNav">
+                <h6 id="hotel_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">Informations de l'hotel
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="hotel_ul" class="myUl">
+                    <li><a href="../qui_sommes_nous/qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="../acces/acces.html">Accès</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../recrutement/recrutement.html">Recrutement</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 2 LIENS HOTEL -->
+            <!-- NAV 3 LIENS NEWS -->
+            <nav id="news_nav" class="col-4 myNav" >
+                <h6 id="news_title" class="d-flex justify-content-between d-lg-block pl-2 myTitle">News
+                    <img src="../index/pictures/include/arrow_down.png" class="d-lg-none myImg" alt="Fleche navigation">
+                </h6>
+                <ul id="news_ul" class="myUl">
+                    <li><a href="../evenements/evenements.html">Evènements</a></li>
+                    <li><a href="../actualites/actualites.html">Actualités</a></li>
+                    <li><a href="../actualites/actualites.html">Presse</a></li>
+                    <li><a href="../newsletter/newsletter.html">M'abonner à la newsletter</a></li>
+                </ul>
+            </nav>
+            <!-- FIN NAV 3 LIENS NEWS -->
+        </div>
+
+        <div id="social_network" class="row pt-5">
+            <div class="row py-5 pl-5 mr-0 justify-content-center align-items-center">
+                <p class="d-inline-block m-0 pr-3">Suivez-nous: </p>
+            </div>
+            <span class="row align-items-center col-8">
+                <span class="pr-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+                <span class="pr-2"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+                <span class="pr-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="pr-2"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="pr-2"><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></span>
+            </span>
+        </div>
+        <!-- FIN ROW-->
+    </footer>
+<!-- FIN FOOTER -->
+<script src="../index/index_bis.js"></script>
+<script src="../extend/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

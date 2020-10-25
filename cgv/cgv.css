@@ -1,0 +1,23 @@
+body{
+	background: lightgrey;
+}
+
+.myWhite{
+    background: whitesmoke;
+}
+
+.myBorder{
+	border-radius: 10px;
+	margin: 100px 0 100px 0;
+	padding: 50px 15px 50px 15px;
+	border: 0.1rem lightgrey solid;
+}
+h5{
+	padding-bottom: 20px;
+	padding-top: 50px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+h3{
+	font-weight: bold;
+}

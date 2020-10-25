@@ -1,0 +1,42 @@
+.myEvent_row{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.myFrame{
+    height: 450px;
+}
+
+@media screen and (max-width: 768px ) {
+    .myFrame{
+        height: 300px;
+    }
+
+}
+
+.row_bg{
+    background-color: #C2A362;
+}
+
+.even_pad{
+    padding-top: 59px;
+}
+
+h1, #famille{
+    color: #C2A362;
+    font-weight: bold;
+}
+
+h4{
+    color: black;
+    font-weight: bold;
+}
+
+p > strong{
+    color: black; !important;
+}
+
+.famille{
+    color: #C2A362;
+
+}
